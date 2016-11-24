@@ -26,5 +26,12 @@ namespace OpenForCitizen.Controllers
 
             return View();
         }
+
+        public ActionResult Sick()
+        {
+            ViewBag.Message = "";
+
+            return View();
+        }
     }
 }
