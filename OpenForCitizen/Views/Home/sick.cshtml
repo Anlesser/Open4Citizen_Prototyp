@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Sick";
+}
+
+<head>
+    <script>
+       
+        function getImageCoords(event,img){
+            var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
+            var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetTop;
+
+            var coords = "X: " + posX + ", Y coords: " + posY;
+            document.getElementById("client").innerHTML = coords;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>sick</h2>
+    <p id="client"></p>
+
+    <div id="Container">
+        <img style="border:dotted 1px" alt="Klicka för att zooma" onclick="getImageCoords(event,this)"
+             src="http://www.clipartbest.com/cliparts/pc5/ep8/pc5ep8LKi.gif"/>
+    </div>
+    <p>Var gör det ont ?</p>
+</body>
