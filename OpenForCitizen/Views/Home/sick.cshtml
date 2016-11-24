@@ -1,28 +1,37 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Sick";
 }
 
 <head>
     <script>
-       
-        function getImageCoords(event,img){
+        function check(x, y) {
+            if (x) {
+
+            }
+        }
+
+        function getImageCoords(event, img) {
             var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
             var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetTop;
-
-            var coords = "X: " + posX + ", Y coords: " + posY;
+            var width = img.width;
+            var height = img.height;
+            var pX = posX / width;
+            var pY = posY / height;
+            var coords = "X: " + posX + ", Y coords: " + posY + "<br>X in % : " + pX + ", Y  in %: " + pY;
             document.getElementById("client").innerHTML = coords;
         }
     </script>
 </head>
 
 <body>
-    <h2>sick</h2>
+    <h2>Sick</h2>
     <p id="client"></p>
-    <p>random insert for change</p>
     <div id="Container">
-        <img style="border:dotted 1px" alt="Klicka för att zooma" onclick="getImageCoords(event,this)"
-             src="http://www.clipartbest.com/cliparts/pc5/ep8/pc5ep8LKi.gif"/>
+        <img style="max-height:100%;max-width:100%" alt="Klicka för att zooma" onclick="getImageCoords(event,this)"
+             src="~/Pictures/BodyPic.jpg">
     </div>
-    <p>Var gör det ont ?</p>
+    <div class="row">
+        <p>Var gör det ont ?</p>
+
+    </div>
 </body>

@@ -32,5 +32,10 @@ namespace OpenForCitizen.Controllers
 
             return View();
         }
+        public ActionResult Sick()
+        {
+            ViewBag.Message = "Where does it hurt?";
+            return View();
+        }
     }
 }
