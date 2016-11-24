@@ -26,9 +26,9 @@ namespace OpenForCitizen.Controllers
 
             return View();
         }
-        public ActionResult Sick()
+        public ActionResult Menu()
         {
-            ViewBag.Message = "Where does it hurt?";
+            ViewBag.Message = "Menu";
 
             return View();
         }
