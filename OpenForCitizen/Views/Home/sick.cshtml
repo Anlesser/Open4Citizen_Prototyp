@@ -4,8 +4,8 @@
 
 <head>
     <script>
-        function check(x,y) {
-            if(x){
+        function check(x, y) {
+            if (x) {
 
             }
         }
@@ -13,10 +13,12 @@
         function getImageCoords(event, img) {
             var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
             var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetTop;
-
-            var coords = "X: " + posX + ", Y coords: " + posY;
+            var width = img.width;
+            var height = img.height;
+            var pX = posX / width;
+            var pY = posY / height;
+            var coords = "X: " + posX + ", Y coords: " + posY + "<br>X in % : " + pX + ", Y  in %: " + pY;
             document.getElementById("client").innerHTML = coords;
-            check(posX, posY);
         }
     </script>
 </head>
@@ -25,7 +27,7 @@
     <h2>Sick</h2>
     <p id="client"></p>
     <div id="Container">
-        <img style="max-height: 100%; max-width:100%" alt="Klicka för att zooma" onclick="getImageCoords(event,this)"
+        <img style="max-height:100%;max-width:100%" alt="Klicka för att zooma" onclick="getImageCoords(event,this)"
              src="~/Pictures/BodyPic.jpg">
     </div>
     <div class="row">
