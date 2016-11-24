@@ -5,40 +5,54 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style>
     .container-fluid {
-        
     }
+
     .col-sm-6 {
-        padding: 20px;
-        background-color:lightgrey;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: blue;
+        min-height: 100px;
     }
+
     .col-md-6 {
-        padding: 40px;
-        background-color:lightgrey;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: white;
+        min-width: 300px;
     }
+
     .col-lg-6 {
-        
-        background-color:lightgrey;
+        background-color: white;
     }
 </style>
-<div class="container-fluid text-center">
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6" style="border-style:solid; border-color:white;border-width:medium;">
-            <span class="glyphicon glyphicon-user" style="font-size:40px;margin-top:auto"></span>
-            <font size="10">Frisk</font>
-        </div>
+<body background="~/Pictures/kronoparken.png" style="background-size:cover">
 
-        <div class="col-sm-6 col-md-6 col-lg-6" style="border-style:solid; border-color:white;border-width:medium">
-            <span class="glyphicon glyphicon-heart" style="font-size:40px;margin-top:auto"></span>
-            <font size="10">Sjuk</font>
+    <div class="container-fluid text-center">
+        <div class="row">
+
+            <button class="btn btn-default btn-group-lg button col-sm-6 col-md-6 col-lg-6">
+                <span class="glyphicon glyphicon-user" style="font-size:40px;margin-top:auto"></span>
+                <font size="10">Frisk</font>
+            </button>
+
+            <button class="btn btn-default btn-group-lg col-sm-6 col-md-6 col-lg-6">
+                <span class="glyphicon glyphicon-heart" style="font-size:40px;margin-top:auto"></span>
+                <font size="10">Sjuk</font>
+            </button>
+        </div>
+        <div class="row">
+            <button class="btn btn-default btn-group-lg col-sm-6 col-md-6 col-lg-6">
+                <span class="glyphicon glyphicon-info-sign" style="font-size:40px;margin-top:auto"></span>
+                <font size="10">Info</font>
+            </button>
+            <button class="btn btn-default btn-group-lg col-sm-6 col-md-6 col-lg-6">
+                <span class="glyphicon glyphicon-question-sign" style="font-size:40px;margin-top:auto"></span>
+                <font size="10">Frågor</font>
+            </button>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6" style="border-style:solid; border-color:white;border-width:medium">
-            <span class="glyphicon glyphicon-info-sign" style="font-size:40px;margin-top:auto"></span>
-            <font size="10">Info</font>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6" style="border-style:solid; border-color:white;border-width:medium">
-            <span class="glyphicon glyphicon-question-sign" style="font-size:40px;margin-top:auto"></span>
-            <font size="10">Frågor</font>
-        </div>
-    </div>
+</body>
