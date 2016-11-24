@@ -163,6 +163,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Pictures\BodyPic.jpg" />
     <Content Include="Pictures\kronoparken.png" />
+    <Content Include="Scripts\body-check.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
