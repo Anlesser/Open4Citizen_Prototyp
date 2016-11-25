@@ -15,35 +15,47 @@
         padding-bottom: 20px;
         background-color: white;
         min-width: 300px;
+        position: center;
+        border-radius: 15px;
+        margin-bottom: 5px;
     }
 </style>
 
-<body background="~/Pictures/kronoparken.png" style="background-size:cover">
+<head>
+    <title></title>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
 
+</head>
+
+<body background="~/Pictures/kronoparken.png" style="background-size:cover">
+    <br />
+    <br />
+
+    <div class="row text-center" style="background-color:white; margin-bottom:5px;border-radius:15px;">
+        <h1>Aktuell information</h1>
+        <p style="position:center">
+            Det är halt ute så gå försiktigt.
+        </p>
+        <p>
+            Magsjukan sprider sig i denna tid så var nog med att tvätta händerna.
+        </p>
+    </div>
     <div class="container-fluid text-center">
         <div class="row">
-            <div class="jumbotron" style="background-color:white">
-                <h1>Aktuell information</h1>
-                <p>
-                    Det är halt ute så gå försiktigt.
-                </p>
-                <p>
-                    Magsjukan sprider sig i denna tid så var nog med att tvätta händerna.
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div sstyle="margin:2px">
+            <div>
                 <button class="btn btn-default btn-group-lg button col-sm-6 menulayout">
                     <span class="glyphicon glyphicon-user" style="font-size:40px;margin-top:auto"></span>
                     <font size="10">Frisk</font>
                 </button>
             </div>
             <div>
-                <button class="btn btn-default btn-group-lg col-sm-6 menulayout">
-                    <span class="glyphicon glyphicon-heart" style="font-size:40px;margin-top:auto"></span>
-                    <font size="10">Sjuk</font>
-                </button>
+                <form action="@Url.Action("Sick", "Home")">
+                    <button class="btn btn-default btn-group-lg col-sm-6 menulayout">
+                        <span class="glyphicon glyphicon-heart" style="font-size:40px;margin-top:auto"></span>
+                        <font size="10">Sjuk</font>
+                    </button>
+                </form>
             </div>
         </div>
         <div class="row">
