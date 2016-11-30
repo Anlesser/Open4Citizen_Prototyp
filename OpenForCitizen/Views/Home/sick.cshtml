@@ -19,5 +19,20 @@
         <p>Var gör det ont ?</p>
 
     </div>
+
+    <img src="/Pictures/BodyPic.jpg" alt="" usemap="#humanbody" />
+    <map name="mymap">
+        <area data-key="head" href="#" shape="poly" coords="125, 11, 107, 21, 101, 43, 107, 57, 111, 73, 143, 73, 149, 45, 151, 33, 143, 13" />
+    </map>
+
+    <script language="javascript">
+        $('#humanbody').mapster({
+            singleSelect: true,
+            render_highlight: { altImage: "/Pictures/human body grey.jpg" }
+        });
+
+    </script>
+
+
    
 </body>
