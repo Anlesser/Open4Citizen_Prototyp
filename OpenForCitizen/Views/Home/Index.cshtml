@@ -5,6 +5,18 @@
     <title></title>
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <style>
+        .menulayout {
+        min-width: 300px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: white;
+        min-width: 300px;
+        position: center;
+        border-radius: 15px;
+        margin-bottom: 5px;
+    }
+    </style>
 
 </head>
 
@@ -16,16 +28,16 @@
              
                  <div class="col-md-4 col-sm-4 col-xs-4">
                      <form action="@Url.Action("Menu", "Home", new { language= "swedish" })" method="post">
-                         <button class="btn btn-default btn-group-lg" type="submit" style="height:100px; width:100px; border-radius:15px">
+                         <button class="btn btn-default btn-group-lg menulayout" >
                              <p style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Hej</p>
-                             <p style="font-size:small; font-family:'Segoe UI',  Tahoma, Geneva, Verdana, sans-serif">Svenska</p>
+                             <p style="font-size:medium; font-family:'Segoe UI',  Tahoma, Geneva, Verdana, sans-serif">Svenska</p>
                          </button>
                      </form>
                 </div>
              
             <div class="col-md-4 col-sm-4 col-xs-4" >
                 <form action="@Url.Action("Menu", "Home", new { language= "english" })" method="post">
-                    <button class="btn btn-default btn-group-lg" style="height:100px; width:100px ; border-radius:15px">
+                    <button class="btn btn-default btn-group-lg menulayout" >
                         <p style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Hello</p>
                         <p style="font-size:small; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">English</p>
                     </button>
@@ -34,7 +46,7 @@
 
              <div class="col-md-4 col-sm-4 col-xs-4" style="">
                  <form action="@Url.Action("Menu", "Home", new { language= "spanish" })" method="post">
-                     <button class="btn btn-default btn-group-lg" style="height:100px; width:100px ; border-radius:15px">
+                     <button class="btn btn-default btn-group-lg menulayout" >
                          <p style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Hola</p>
                          <p style="font-size:small; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Español</p>
                      </button>
