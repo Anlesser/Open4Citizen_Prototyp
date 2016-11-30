@@ -5,56 +5,63 @@
     <title></title>
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="~/scripts/jquery-1.10.2.min.js"></script>
-  
-    <script>
-        $(document).ready(function () {
-            $('#continueDiv').hover(function () {
-                    $('#continueText').css('color', 'red')
-                    $('#continueArrow').css('color', '#007acc')
-              }, function () {
-                    $('#continueText').css("color", "gray");
-                    $('#continueArrow').css('color', '#0099ff')
-            });
-        });
-    </script>
+    <style>
+        .menulayout {
+        min-width: 300px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: white;
+        min-width: 300px;
+        position: center;
+        border-radius: 15px;
+        margin-bottom: 5px;
+    }
+    </style>
+
 </head>
 
 <body background="~/Pictures/kronoparken.png" style="background-size:cover" >
-    <div class="container text-center">
-         <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-4" >
-                <button class="btn btn-default btn-group-lg" style="height:100px; width:100px">
-                    <p style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Hej</p>
-                    <p style="font-size:small; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Svenska</p>
-                </button>
-            </div>
 
+    <div class="container text-center">
+        <br /><br />
+         <div class="row">
+             
+                 <div class="col-md-4 col-sm-4 col-xs-4">
+                     <form action="@Url.Action("Menu", "Home", new { language= "swedish" })" method="post">
+                         <button class="btn btn-default btn-group-lg menulayout" >
+                             <p style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Hej</p>
+                             <p style="font-size:medium; font-family:'Segoe UI',  Tahoma, Geneva, Verdana, sans-serif">Svenska</p>
+                         </button>
+                     </form>
+                </div>
+             
             <div class="col-md-4 col-sm-4 col-xs-4" >
-                <button class="btn btn-default btn-group-lg" style="height:100px; width:100px">
-                    <p style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Hello</p>
-                    <p style="font-size:small; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">English</p>
-                </button>
+                <form action="@Url.Action("Menu", "Home", new { language= "english" })" method="post">
+                    <button class="btn btn-default btn-group-lg menulayout" >
+                        <p style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Hello</p>
+                        <p style="font-size:small; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">English</p>
+                    </button>
+                </form>
             </div>
 
              <div class="col-md-4 col-sm-4 col-xs-4" style="">
-                 <button class="btn btn-default btn-group-lg" style="height:100px; width:100px">
-                     <p style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Hola</p>
-                     <p style="font-size:small; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Español</p>
-                 </button>
-             </div>
+                 <form action="@Url.Action("Menu", "Home", new { language= "spanish" })" method="post">
+                     <button class="btn btn-default btn-group-lg menulayout" >
+                         <p style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Hola</p>
+                         <p style="font-size:small; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Español</p>
+                     </button>
+                 </form>
+            </div>
         </div>
 
         <br>
 
-        <div id="continueDiv" class="col-md-12 col-sm-12 col-xs-12 text-center" href="#">        
-            <p id="continueText" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size">
+        @*<div id="continueDiv" class="col-md-12 col-sm-12 col-xs-12 text-center" >        
+            <p id="continueText" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <span id="continueArrow" class="glyphicon glyphicon-chevron-right " style="font-size:40px; color:#0099ff"></span>
-                <br /> <b>Gå vidare</b>
+                <br /> <b>Fortsätt</b>
                 
             </p>
-        </div>
+        </div>*@
     </div>
-
-
-    <a href="@Url.Action("Sick","Home")">Sick</a>
 </body>

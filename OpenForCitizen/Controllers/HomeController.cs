@@ -26,7 +26,7 @@ namespace OpenForCitizen.Controllers
 
             return View();
         }
-        public ActionResult Menu()
+        public ActionResult Menu(string language)
         {
             ViewBag.Message = "Menu";
 

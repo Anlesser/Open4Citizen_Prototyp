@@ -26,6 +26,6 @@ function getImageCoords(event, img) {
     var pX = posX / width;
     var pY = posY / height;
     var coords = "X: " + posX + ", Y coords: " + posY + "<br>X%: " + pX + ", Y%: " + pY;
-    document.getElementById("client").innerHTML = coords;
+    document.getElementById("client").innerHTML =coords;
     document.getElementById("BPart").innerHTML = check(pX, pY);
 }

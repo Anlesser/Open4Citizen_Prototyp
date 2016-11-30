@@ -2,57 +2,75 @@
 @{
     ViewBag.Title = "Menu";
 }
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 <style>
     .container-fluid {
     }
 
-    .col-sm-6 {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background-color: blue;
-        min-height: 100px;
-    }
-
-    .col-md-6 {
+    .menulayout {
+        min-width: 300px;
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 20px;
         padding-bottom: 20px;
         background-color: white;
         min-width: 300px;
-    }
-
-    .col-lg-6 {
-        background-color: white;
+        position: center;
+        border-radius: 15px;
+        margin-bottom: 5px;
     }
 </style>
-<body background="~/Pictures/kronoparken.png" style="background-size:cover">
 
+<head>
+    <title></title>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+
+</head>
+
+<body background="~/Pictures/kronoparken.png" style="background-size:cover">
+    <br />
+    <br />
+
+    <div class="row text-center" style="background-color:white; margin-bottom:5px;border-radius:15px;">
+        <h1>Aktuell information</h1>
+        <p style="position:center">
+            Det är halt ute så gå försiktigt.
+        </p>
+        <p>
+            Magsjukan sprider sig i denna tid så var nog med att tvätta händerna.
+        </p>
+    </div>
     <div class="container-fluid text-center">
         <div class="row">
-
-            <button class="btn btn-default btn-group-lg button col-sm-6 col-md-6 col-lg-6">
-                <span class="glyphicon glyphicon-user" style="font-size:40px;margin-top:auto"></span>
-                <font size="10">Frisk</font>
-            </button>
-
-            <button class="btn btn-default btn-group-lg col-sm-6 col-md-6 col-lg-6">
-                <span class="glyphicon glyphicon-heart" style="font-size:40px;margin-top:auto"></span>
-                <font size="10">Sjuk</font>
-            </button>
+            <div>
+                <button class="btn btn-default btn-group-lg button col-sm-6 menulayout">
+                    <span class="glyphicon glyphicon-user" style="font-size:40px;margin-top:auto"></span>
+                    <font size="10">Frisk</font>
+                </button>
+            </div>
+            <div>
+                <form action="@Url.Action("Sick", "Home")">
+                    <button class="btn btn-default btn-group-lg col-sm-6 menulayout">
+                        <span class="glyphicon glyphicon-heart" style="font-size:40px;margin-top:auto"></span>
+                        <font size="10">Sjuk</font>
+                    </button>
+                </form>
+            </div>
         </div>
         <div class="row">
-            <button class="btn btn-default btn-group-lg col-sm-6 col-md-6 col-lg-6">
-                <span class="glyphicon glyphicon-info-sign" style="font-size:40px;margin-top:auto"></span>
-                <font size="10">Info</font>
-            </button>
-            <button class="btn btn-default btn-group-lg col-sm-6 col-md-6 col-lg-6">
-                <span class="glyphicon glyphicon-question-sign" style="font-size:40px;margin-top:auto"></span>
-                <font size="10">Frågor</font>
-            </button>
+            <div>
+                <button class="btn btn-default btn-group-lg col-sm-6 menulayout">
+                    <span class="glyphicon glyphicon-info-sign" style="font-size:40px;margin-top:auto"></span>
+                    <font size="10">Info</font>
+                </button>
+            </div>
+            <div>
+                <button class="btn btn-default btn-group-lg col-sm-6 menulayout">
+                    <span class="glyphicon glyphicon-question-sign" style="font-size:40px;margin-top:auto"></span>
+                    <font size="10">Frågor</font>
+                </button>
+            </div>
         </div>
     </div>
 </body>
