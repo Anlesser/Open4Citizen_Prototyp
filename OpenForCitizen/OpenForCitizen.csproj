@@ -163,6 +163,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Pictures\BodyPic.jpg" />
+    <Content Include="Pictures\human body grey.png" />
     <Content Include="Pictures\kronoparken.png" />
     <Content Include="Scripts\body-check.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -185,6 +186,7 @@
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.imagemapster.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
