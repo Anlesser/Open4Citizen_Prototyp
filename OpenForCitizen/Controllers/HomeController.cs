@@ -37,5 +37,9 @@ namespace OpenForCitizen.Controllers
             ViewBag.Message = "Where does it hurt?";
             return View();
         }
+        public ActionResult LevelOfPain() {
+            ViewBag.Message = "How painfull is it ?";
+            return View();
+        }
     }
 }
