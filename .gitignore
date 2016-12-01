@@ -240,3 +240,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/OpenForCitizen/Views/Home/Sick.old.cshtml
