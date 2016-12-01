@@ -38,30 +38,32 @@
     </script>
 </head>
 <body>
+    @if (Request.Url.ToString() != (Request.Url.Scheme + "://" + Request.Url.Authority + Request.ApplicationPath.TrimEnd('/') + "/")) // döljer bakåtknappen på förstasidan.
+    {
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6" style="float:left">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li>
+                                <a class="glyphicon glyphicon-arrow-left" id="backIcon" style="color:gray; font-size:50px; float:left" href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6" style="float:right">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a class="glyphicon glyphicon-home" id="homeIcon" style="color:gray; font-size:50px; float:right"
+                                   href="@Url.Action("Index","Home")"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-    <div class="navbar navbar-inverse navbar-static-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6" style="float:left">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li>
-                            <a class="glyphicon glyphicon-arrow-left" id="backIcon" style="color:gray; font-size:50px; float:left" href="#"></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6" style="float:right">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a class="glyphicon glyphicon-home" id="homeIcon" style="color:gray; font-size:50px; float:right"
-                                href="@Url.Action("Index","Home")">  </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
-
         </div>
-    </div>
-   
+    }
+
     <div class="container body-content">
         @RenderBody()
     </div>
