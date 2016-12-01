@@ -38,7 +38,7 @@
     </script>
 </head>
 <body>
-    @if (Request.Url.ToString() != "http://localhost:60076/") // döljer bakåtknappen på förstasidan.
+    @if (Request.Url.ToString() != (Request.Url.Scheme + "://" + Request.Url.Authority + Request.ApplicationPath.TrimEnd('/') + "/")) // döljer bakåtknappen på förstasidan.
     {
         <div class="navbar navbar-inverse navbar-static-top">
             <div class="container">
