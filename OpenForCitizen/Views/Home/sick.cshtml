@@ -1,53 +1,30 @@
 ﻿@{
     ViewBag.Title = "Sick";
 }
-
 <head>
-    <script type="text/javascript" src="~/Scripts/body-check.js"></script>
-    <script type="text/x-jquery-tmpl" src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-3.1.1.js"></script>
     <style>
-        img {
-            border: solid 1px;
-            max-height:100%;
-            max-width:100%;
-        }
-
-        .selected {
-            box-shadow: 0px 12px 22px 100px #333;
-        }
     </style>
 </head>
-
 <body>
-    <h2>Sick</h2>
-    <p id="client"></p>
-    <p id="BPart"></p>
-    <div id="Container">
-        <img alt="Välj kroppsdel" onclick="getImageCoords(event,this)" src="~/Pictures/BodyPic.jpg" usemap="#testmap">
-        <map name="testmap">
-            <area id="head" shape="rect" coords="175,0,230,70" onmouseover="document.getElementById('client').innerHTML = 'HEADER'">
-        </map>
-    </div>
-    <div class="row">
-        <p style="float">Var gör det ont ?</p>
-    </div>
-    <div class="row">
 
-    </div>
-
-    <img src="/Pictures/BodyPic.jpg" alt="" usemap="#humanbody" />
-    <map name="mymap">
-        <area data-key="head" href="#" shape="poly" coords="125, 11, 107, 21, 101, 43, 107, 57, 111, 73, 143, 73, 149, 45, 151, 33, 143, 13" />
-    </map>
-
-    <script language="javascript">
-        $('#humanbody').mapster({
-            singleSelect: true,
-            render_highlight: { altImage: "/Pictures/human body grey.jpg" }
+    <h1>Var gör det ont ?</h1>
+    <svg width="250px" height="250px">
+        <g class="triangleGroup">
+            <polygon id="test" points="50,50 180,200 250,80" fill="#FFFFFF" stroke="#111">
+            </polygon>
+        </g>
+    </svg>
+    <button class="btn" id="reset">
+        Ta bort val
+    </button>
+    <script>
+        $('#test').on("click", function () {
+            $('#test').css({ fill: "#111" });
         });
 
+        $('#reset').on("click", function () {
+            $('#test').css({ fill: "#ffffff" });
+        });
     </script>
-
-
-   
 </body>

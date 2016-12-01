@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "How painful is it?";
+}
+<head>
+    <script type=""></script>
+    <style>
+        #slider {
+            margin: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="row">
+        <div id="slider"></div>
+        Seek To : <input id="seekTo" type="text" value="10" />
+        <input id="update" type="button" value="Update" />
+        Current Value : <span id="val">0</span>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#slider").slider(
+            {
+                min: 0,
+                max: 100,
+                step: 1,
+                change: showValue
+
+            });
+            $("#update").click(function () {
+                $("#slider").slider("option", "value", $("#seekTo").val());
+
+            });
+            function showValue(event, ui) {
+                $("#val").html(ui.value);
+            }
+        });
+    </script>
+</body>
