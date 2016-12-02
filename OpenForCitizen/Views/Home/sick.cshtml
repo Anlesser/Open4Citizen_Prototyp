@@ -4,13 +4,14 @@
 }
 
 <head>
+    <meta name="key" content="cc7f8361f7eb4e51b46c95d376c7010a">
     <script type="text/javascript" src="~/Scripts/body-check.js"> </script>
     <script src="~/scripts/jquery-3.1.1.min.js"></script>
     <script>
         $(document).ready(function () {
             $('#showFullbodyButttom').click(function () {
-                $("#fullbodyDiv").show();
-                $("#detailedheadDiv").hide();
+                $("#detailedheadDiv").fadeOut(300);
+                $("#fullbodyDiv").delay(300).fadeIn(300);
             });
         });
     </script>
@@ -79,8 +80,10 @@
         <svg class="body" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 91.200872 207.09846" xmlns:xlink="http://www.w3.org/1999/xlink">
             <script type="text/javascript">
                 function showHead() {
-                    $("#fullbodyDiv").hide();
-                    $("#detailedheadDiv").show();
+                    
+                   $("#fullbodyDiv").fadeOut(300);
+                   $("#detailedheadDiv").delay(300).fadeIn(500);
+
                 }
             </script>
             <g id="g3" transform="translate(-55.675 .82010)">
