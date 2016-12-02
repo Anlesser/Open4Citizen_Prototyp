@@ -10,8 +10,8 @@
     <script>
         $(document).ready(function () {
             $('#showFullbodyButttom').click(function () {
-                $("#fullbodyDiv").show();
-                $("#detailedheadDiv").hide();
+                $("#detailedheadDiv").fadeOut(300);
+                $("#fullbodyDiv").delay(300).fadeIn(300);
             });
         });
     </script>
@@ -78,8 +78,8 @@
             <script type="text/javascript">
                 function showHead() {
                     
-                   $("#fullbodyDiv").hide();
-                   $("#detailedheadDiv").fadeIn(1000);
+                   $("#fullbodyDiv").fadeOut(300);
+                   $("#detailedheadDiv").delay(300).fadeIn(500);
 
                 }
             </script>
