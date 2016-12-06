@@ -206,6 +206,7 @@
     <Content Include="Pictures\BodyPic.jpg" />
     <Content Include="Pictures\human body grey.png" />
     <Content Include="Pictures\kronoparken.png" />
+    <Content Include="Pictures\krpVC.JPG" />
     <Content Include="Scripts\body-check.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -262,6 +263,7 @@
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\Home\LevelOfPain.cshtml" />
     <Content Include="Views\Home\Sick.old.cshtml" />
+    <Content Include="Views\Home\Questions.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

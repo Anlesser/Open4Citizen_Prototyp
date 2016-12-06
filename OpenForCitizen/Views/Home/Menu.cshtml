@@ -18,14 +18,15 @@
         border-radius: 15px;
         margin-bottom: 15px;
     }
+
     div.ex2 {
-        border-radius:15px;
+        border-radius: 15px;
         margin: auto;
         background-color: white;
         margin-bottom: 15px;
-        margin-top:5px;
+        margin-top: 5px;
         text-align: center;
-        max-width:900px;
+        max-width: 900px;
         min-width: 300px;
     }
 </style>
@@ -37,8 +38,8 @@
 
 </head>
 <body background="~/Pictures/kronoparken.png" style="background-size:cover;">
-   
-     <div class="container-fluid text-center">
+
+    <div class="container-fluid text-center">
         <div class="ex2">
             <div style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <br />
@@ -79,10 +80,12 @@
             </div>
 
             <div class="col-md-6 col-sm-6">
-                <button class="btn btn-default btn-group-lg menulayout">
-                    <span class="glyphicon glyphicon-question-sign" style="font-size:40px;margin-top:auto"></span>
-                    <div style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Frågor</div>
-                </button>
+                <form action="@Url.Action("Questions","Home")">
+                    <button class="btn btn-default btn-group-lg menulayout">
+                        <span class="glyphicon glyphicon-question-sign" style="font-size:40px;margin-top:auto"></span>
+                        <div style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Frågor</div>
+                    </button>
+                </form>
             </div>
         </div>
     </div>
