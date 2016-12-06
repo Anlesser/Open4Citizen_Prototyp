@@ -4,7 +4,7 @@
 <head>
     <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
     <script src="~/Scripts/jquery-3.1.1.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <style>
         input[type=range] {
@@ -109,15 +109,36 @@
 </head>
 <body>
         <div class="row">
-            <div class="col-md-2">
-                <span class="glyphicon glyphicon-heart" aria-hidden="true" style="float:left"></span>
+            <div class="col-md-4">
+                <span class="glyphicon glyphicon-heart" aria-hidden="true" style="float:right"></span>
+            </div>
+            <div class="col-md-3" style="position:center">
+                <input type="range" id="slider1" value="50" onchange="myFunction()"  />
             </div>
             <div class="col-md-5">
-                <input type="range" id="slider1" value="50" />
-            </div>
-            <div class="col-md-2">
-                <span class="glyphicon glyphicon-heart-empty" aria-hidden="true" style="float:right"></span>
+                <span class="glyphicon glyphicon-heart-empty" aria-hidden="true" style="float:left"></span>
             </div>
         </div>
+    <br />
+    <div class="col-lg-offset-4">
+        <button id="but1" type="button" class="btn btn-default col-lg-3 col-lg-offset-1" style="border-radius 10px" onclick="" >Submit</button>
+    </div>
+    <h2 id="output">test</h2>
 
 </body>
+<script>
+    
+    function myFunction() {
+        var x = document.getElementById("slider1").value;
+        document.getElementById("output").innerHTML = x;
+    }
+
+    function anrop() {
+        var x = document.getElementById("slider1").value;
+    @{ Url.Action("Index", "Home");}
+        
+    }
+    
+    
+
+</script>
