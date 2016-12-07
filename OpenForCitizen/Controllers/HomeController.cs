@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace OpenForCitizen.Controllers
 {
     public class HomeController : Controller
@@ -13,24 +14,10 @@ namespace OpenForCitizen.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
         public ActionResult Menu(string language)
         {
             System.Diagnostics.Debug.Write("\n\n Language: " + language);
             ViewBag.Message = "Menu";
-
             return View();
         }
         public ActionResult Sick()
