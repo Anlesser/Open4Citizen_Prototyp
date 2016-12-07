@@ -29,6 +29,11 @@ namespace OpenForCitizen.Controllers
             ViewBag.Message = "How painfull is it ?";
             return View();
         }
+        public ActionResult Questions()
+        {
+            ViewBag.Message = "Questions ?";
+            return View();
+        }
 
         public ActionResult illnessInfo(string illness)
         {
