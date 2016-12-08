@@ -207,6 +207,7 @@
     <Content Include="Pictures\human body grey.png" />
     <Content Include="Pictures\kronoparken.png" />
     <Content Include="Pictures\krpVC.JPG" />
+    <Content Include="Pictures\Loading_icon.gif" />
     <Content Include="Scripts\body-check.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
