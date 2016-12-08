@@ -41,14 +41,12 @@ namespace OpenForCitizen.Controllers
             ViewBag.Message = "Questions ?";
             return View();
         }
-        public ActionResult LevelOfPain() {
-            ViewBag.Message = "How painfull is it ?";
-            ViewData["pain"]=20;
-            return View();
-        }
+     
 
         public ActionResult InformationOmVarden()
         {
+            return View();
+        }
 
         public ActionResult illnessInfo(string illness)
         {
