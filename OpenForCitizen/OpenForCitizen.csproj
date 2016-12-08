@@ -262,6 +262,7 @@
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\Home\LevelOfPain.cshtml" />
     <Content Include="Views\Home\Sick.old.cshtml" />
+    <Content Include="Views\Home\InformationOmVarden.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

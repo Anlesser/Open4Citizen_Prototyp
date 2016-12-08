@@ -39,6 +39,12 @@ namespace OpenForCitizen.Controllers
         }
         public ActionResult LevelOfPain() {
             ViewBag.Message = "How painfull is it ?";
+            ViewData["pain"]=20;
+            return View();
+        }
+
+        public ActionResult InformationOmVarden()
+        {
             return View();
         }
     }
