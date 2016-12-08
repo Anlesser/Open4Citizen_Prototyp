@@ -1,0 +1,6 @@
+﻿body {
+            background-image: url("/Pictures/kronoparken.png");
+            background-size: cover;
+            background-position:center center;
+            background-attachment:fixed;
+        }
