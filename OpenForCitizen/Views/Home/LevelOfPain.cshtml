@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "How painful is it?";
+    var level = ViewData["pain"];
 }
 <head>
     <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
@@ -121,24 +122,28 @@
         </div>
     <br />
     <div class="col-lg-offset-4">
-        <button id="but1" type="button" class="btn btn-default col-lg-3 col-lg-offset-1" style="border-radius 10px" onclick="" >Submit</button>
+        <button id="but1" type="button" class="btn btn-default col-lg-3 col-lg-offset-1" style="border-radius 10px" >Submit</button>
     </div>
     <h2 id="output">test</h2>
 
 </body>
 <script>
-    
+
     function myFunction() {
         var x = document.getElementById("slider1").value;
         document.getElementById("output").innerHTML = x;
+        return x;
     }
 
     function anrop() {
-        var x = document.getElementById("slider1").value;
-    @{ Url.Action("Index", "Home");}
-        
+        var x = document.getElementById("slider1").value
+        @{Url.Action("Index", "Home"); }
     }
-    
-    
 
+    $(document).ready(function () {
+        $('#but1').click(function () { alert(myFunction()); });
+        $("#but1").click(function () { location.href = "@Url.Action("Index", "Home")"; });
+
+    }
+)
 </script>
