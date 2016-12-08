@@ -8,6 +8,9 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
 using System.Xml;
+using System.Diagnostics;
+using System.Net;
+
 namespace OpenForCitizen.Controllers
 {
     public class HomeController : Controller
@@ -17,24 +20,10 @@ namespace OpenForCitizen.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
         public ActionResult Menu(string language)
         {
-            System.Diagnostics.Debug.Write("\n\n Language: " + language);
+            Debug.Write("\n\n Language: " + language);
             ViewBag.Message = "Menu";
-
             return View();
         }
         public ActionResult Sick()
@@ -55,7 +44,7 @@ namespace OpenForCitizen.Controllers
 
         public ActionResult illnessInfo(string illness)
         {
-            System.Diagnostics.Debug.Write("\n\n Illness: " + illness);
+            Debug.Write("\n\n Illness: " + illness);
             return View();
         }
         [HttpPost]
