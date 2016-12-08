@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+@{
+    ViewBag.Title = "illnessInfo";
+    var key = "cc7f8361f7eb4e51b46c95d376c7010a";
+}
+<head>
+    <script type="text/javascript" src="~/Scripts/body-check.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url:"@Url.Action("searchIllness", "Home")",
+                data: {
+                    illness: "ben"
+                },
+                success: function (data) {
+                    alert("succes");
+                },
+                error: function (data) {
+
+                    alert("error");
+                },
+                type: "POST"
+            });
+        })
+   </script>
+
+</head>
+
+<body>
+  
+
+</body>
