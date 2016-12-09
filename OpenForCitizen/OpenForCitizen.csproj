@@ -213,6 +213,10 @@
     <Content Include="Pictures\human body grey.png" />
     <Content Include="Pictures\kronoparken.png" />
     <Content Include="Pictures\krpVC.JPG" />
+    <Content Include="Pictures\Läkare.jpg" />
+    <Content Include="Pictures\nurse.jpg" />
+    <Content Include="Pictures\Tandhygienist.jpg" />
+    <Content Include="Pictures\Tandläkare.jpg" />
     <Content Include="Pictures\Loading_icon.gif" />
     <Content Include="Scripts\body-check.js" />
     <Content Include="Scripts\bootstrap.js" />
