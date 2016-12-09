@@ -4,6 +4,10 @@
 }
 
 <script src="~/scripts/jquery-1.10.2.min.js"></script>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/MainStylesheet.css">
+
+</head>
 
 <style>
 
@@ -57,23 +61,23 @@
             <div class="col-md-6 col-sm-6">
 
                 <h2 class="text-center">Läkare</h2>
-                <img src="~/Pictures/Läkare.jpg" onclick="openNav(1)" height="180" width="300" />
+                <img src="~/Pictures/Läkare.jpg" onclick="openNav(1)" height="180" width="300" align="middle" />
             </div>
 
             <div class="col-md-6 col-sm-6">
                 <h2 class="text-center">Tandläkare</h2>
-                <img src="~/Pictures/Tandläkare.jpg" onclick="openNav(2)" height="180" width="300" />
+                <img src="~/Pictures/Tandläkare.jpg" onclick="openNav(2)" height="180" width="300" align="middle" />
             </div>
         </div>
         <div class="row">
            
             <div class="col-md-6 col-sm-6">
                 <h2 class="text-center">Sjuksköterska</h2>
-                <img src="~/Pictures/nurse.jpg" onclick="openNav(3)" height="180" width="300" />
+                <img src="~/Pictures/nurse.jpg" onclick="openNav(3)" height="180" width="300" align="middle" />
             </div>
             <div class="col-md-6 col-sm-6">
                 <h2 class="text-center">Tandhygienist</h2>
-                <img src="~/Pictures/Tandhygienist.jpg" onclick="openNav(4)" height="180" width="300" />
+                <img src="~/Pictures/Tandhygienist.jpg" onclick="openNav(4)" height="180" width="300" align="middle" />
             </div>
         </div>
     </div>
@@ -83,7 +87,7 @@
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-            <a href="#">About</a>
+            
             <div class="videoWrapper" id="video-objekt">
                 <iframe class="videoWrapper-iframe" src="https://www.youtube.com/embed/Mprwljl7vh0" frameborder="0" allowfullscreen></iframe>
             </div>
@@ -97,9 +101,7 @@
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>*@
 
     <script>
-        $(".sjuksköterska").click(function () {
-            document.getElementById("myNav").style.width = "100%";
-        });
+    
 
         function openNav(a) {
             if (a == 1) { document.getElementById("video-objekt").innerHTML = '<iframe class="videoWrapper-iframe" src="https://www.youtube.com/embed/pX9n3nMLPR8" frameborder="0" allowfullscreen></iframe>' }
