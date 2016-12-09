@@ -58,7 +58,7 @@ namespace OpenForCitizen.Controllers
         {
             // Create a request for the URL. 
             WebRequest request = WebRequest.Create(
-              "http://www.1177.se/api/v2/artiklar/?antal=4&key=cc7f8361f7eb4e51b46c95d376c7010a");
+              "http://www.1177.se/api/v2/artiklar/?antal=4&cat=ögon&key=cc7f8361f7eb4e51b46c95d376c7010a");
             // If required by the server, set the credentials.
             request.Credentials = CredentialCache.DefaultCredentials;
             // Get the response.

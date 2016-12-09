@@ -25,7 +25,6 @@
             -webkit-animation: spin 2s linear infinite;
             animation: spin 2s linear infinite;
         }
-
     </style>
     <script type="text/javascript" src="~/Scripts/body-check.js">
     </script>
@@ -56,13 +55,19 @@
             $("#containerDiv").show();
             var idCount = 1;
             $(xmldata).find("entry").each(function () {
+
                 $("#containerDiv").append('<div class="container" id="artikelDiv' + idCount + '" style="background-color:white; border-radius: 15px; margin:15px; padding-top:5px; padding-bottom:10px">')
                 $('#artikelDiv' + idCount).append('<h2>' + $(this).find("title").text() + '</h2>')
-                $('#artikelDiv' + idCount).append('<p>' + $(this).find("summary").text() + '</p>')
-                $('#artikelDiv' + idCount).append('<a data-toggle="collapse" href="#contentDiv' + idCount + '"> read more </a>')
-                $('#artikelDiv' + idCount).append('<div id="contentDiv' + idCount + '" class="panel-collapse collapse out"></div>')
-                $('#contentDiv' + (idCount++)).append($(this).find("content").text())
-                $('#artikelDiv' + idCount).append('</div>')
+                var summary = $(this).find("summary").text();
+
+                if (summary.length > 500) {
+                    $('#artikelDiv' + idCount).append('<div id="contentDiv' + idCount + '"class="panel-collapse collapse out"></div>')
+                    $('#artikelDiv' + idCount).append('<a data-toggle="collapse" href="#contentDiv' + idCount + '"> Läs mer </a>')
+                    $('#contentDiv' + idCount).append('<p>' + summary  + '</p>')
+                }
+                else { $('#artikelDiv' + (idCount)).append('<p>' + summary + '</p>') }
+                idCount++;
+                 $('#artikelDiv' + (idCount++)).append('</div>')
             });
         }
     </script>
