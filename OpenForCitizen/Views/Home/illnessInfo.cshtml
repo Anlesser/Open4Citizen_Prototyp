@@ -1,15 +1,39 @@
-﻿<!DOCTYPE html>
-@{
+﻿@{
     ViewBag.Title = "illnessInfo";
-    var key = "cc7f8361f7eb4e51b46c95d376c7010a";
 }
+
+
+<link rel="stylesheet" type="text/css" href="~/Content/MainStylesheet.css">
 <head>
+    <style>
+        .artikellayout {
+            background-color: red;
+            color: blue;
+        }
+
+        #contentDiv {
+            background-color: #e6e6e6;
+            border-radius: 5px;
+        }
+
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+    </style>
     <script type="text/javascript" src="~/Scripts/body-check.js">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
             $.ajax({
+
                 url: "@Url.Action("searchIllness", "Home")",
                 data: {
                     illness: "ben"
@@ -24,16 +48,21 @@
         })
     </script>
 
+
+
     <script type="text/javascript">
         function queryData(xmldata) {
             $("#loadingIcon").hide();
+            $("#containerDiv").show();
             var idCount = 1;
             $(xmldata).find("entry").each(function () {
-                $("#containerDiv").append('<h5><b>' + $(this).find("title").text() + '</b></h5>')
-                $("#containerDiv").append('<p style="color:red;">' + $(this).find("summary").text() + '</p>')
-                //$("#containerDiv").append('<a data-toggle="collapse" href="#contentDiv'+ idCount+'"> read more </a>')
-                //$("#containerDiv").append('<div id="contentDiv' + idCount + '" class="panel-collapse collapse out"></div>')
-                //$('#contentDiv'+(idCount++)).append($(this).find("content").text())
+                $("#containerDiv").append('<div class="container" id="artikelDiv' + idCount + '" style="background-color:white; border-radius: 15px; margin:15px; padding-top:5px; padding-bottom:10px">')
+                $('#artikelDiv' + idCount).append('<h2>' + $(this).find("title").text() + '</h2>')
+                $('#artikelDiv' + idCount).append('<p>' + $(this).find("summary").text() + '</p>')
+                $('#artikelDiv' + idCount).append('<a data-toggle="collapse" href="#contentDiv' + idCount + '"> read more </a>')
+                $('#artikelDiv' + idCount).append('<div id="contentDiv' + idCount + '" class="panel-collapse collapse out"></div>')
+                $('#contentDiv' + (idCount++)).append($(this).find("content").text())
+                $('#artikelDiv' + idCount).append('</div>')
             });
         }
     </script>
@@ -42,9 +71,12 @@
 <body>
 
     <div id="loadingIcon" class="text-center">
-        <img src="~/Pictures/Loading_icon.gif" />
+        <img style="width:150px" src="~/Pictures/loading.gif" />
     </div>
 
 
-    <div class="container" id="containerDiv"></div>
+    <div class="container" id="containerDiv">
+        <h1 align="center" style="color:white">Benvärk kan bero på följande</h1>
+    </div>
+    <script>$("#containerDiv").hide();</script>
 </body>
