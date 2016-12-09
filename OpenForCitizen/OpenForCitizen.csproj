@@ -209,7 +209,6 @@
     <Content Include="Pictures\krpVC.JPG" />
     <Content Include="Pictures\Läkare.jpg" />
     <Content Include="Pictures\nurse.jpg" />
-    <Content Include="Pictures\Sjuksköterska.png" />
     <Content Include="Pictures\Tandhygienist.jpg" />
     <Content Include="Pictures\Tandläkare.jpg" />
     <Content Include="Scripts\body-check.js" />
