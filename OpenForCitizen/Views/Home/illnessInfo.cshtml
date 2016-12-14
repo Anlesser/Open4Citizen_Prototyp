@@ -56,16 +56,21 @@
             var idCount = 1;
             $(xmldata).find("entry").each(function () {
 
-                $("#containerDiv").append('<div class="container" id="artikelDiv' + idCount + '" style="background-color:white; border-radius: 15px; margin:15px; padding-top:5px; padding-bottom:10px">')
+                $("#containerDiv").append('<div class="col-md-12" id="artikelDiv' + idCount + '" style="background-color:white; border-radius: 15px; margin:15px; padding-top:5px; padding-bottom:10px">')
                 $('#artikelDiv' + idCount).append('<h2>' + $(this).find("title").text() + '</h2>')
                 var summary = $(this).find("summary").text();
+                var link = $(this).find('link').attr('href');
 
-                if (summary.length > 500) {
+                if (summary.length > 600) {
                     $('#artikelDiv' + idCount).append('<div id="contentDiv' + idCount + '"class="panel-collapse collapse out"></div>')
                     $('#artikelDiv' + idCount).append('<a data-toggle="collapse" href="#contentDiv' + idCount + '"> Läs mer </a>')
-                    $('#contentDiv' + idCount).append('<p>' + summary  + '</p>')
+                    $('#contentDiv' + idCount).append('<p>' + summary + '</p>')
+                    $('#contentDiv' + idCount).append('<a target="_blank" href="' + link + '">' + 'Läs hela artikeln' + '</a>');
                 }
-                else { $('#artikelDiv' + (idCount)).append('<p>' + summary + '</p>') }
+                else {
+                    $('#artikelDiv' + (idCount)).append('<p>' + summary + '</p>')
+                    $('#artikelDiv' + idCount).append('<a href="' + link + '">' + 'Läs hela artikeln' + '</a>')
+                }
                 idCount++;
                  $('#artikelDiv' + (idCount++)).append('</div>')
             });
@@ -80,7 +85,7 @@
     </div>
 
 
-    <div class="container" id="containerDiv">
+    <div class="container col-md-12 text-center" id="containerDiv">
         <h1 align="center" style="color:white">Benvärk kan bero på följande</h1>
     </div>
     <script>$("#containerDiv").hide();</script>
