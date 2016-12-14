@@ -25,6 +25,7 @@
             -webkit-animation: spin 2s linear infinite;
             animation: spin 2s linear infinite;
         }
+
     </style>
     <script type="text/javascript" src="~/Scripts/body-check.js">
     </script>
@@ -35,7 +36,7 @@
 
                 url: "@Url.Action("searchIllness", "Home")",
                 data: {
-                    illness: "ben"
+                    illness: "ögon"
                 },
                 success: queryData,
                 error: function (data) {
@@ -63,11 +64,11 @@
                 if (summary.length > 500) {
                     $('#artikelDiv' + idCount).append('<div id="contentDiv' + idCount + '"class="panel-collapse collapse out"></div>')
                     $('#artikelDiv' + idCount).append('<a data-toggle="collapse" href="#contentDiv' + idCount + '"> Läs mer </a>')
-                    $('#contentDiv' + idCount).append('<p>' + summary  + '</p>')
+                    $('#contentDiv' + idCount).append('<p>' + summary + '</p>')
                 }
                 else { $('#artikelDiv' + (idCount)).append('<p>' + summary + '</p>') }
                 idCount++;
-                 $('#artikelDiv' + (idCount++)).append('</div>')
+                $('#artikelDiv' + (idCount++)).append('</div>')
             });
         }
     </script>
@@ -81,7 +82,8 @@
 
 
     <div class="container" id="containerDiv">
-        <h1 align="center" style="color:white">Benvärk kan bero på följande</h1>
+        <h1 align="center" style="color:white">
+        @{if (Session["illness"] != null) { @Html.Raw(Session["illness"].ToString()); } } problem kan bero på följande</h1>
     </div>
     <script>$("#containerDiv").hide();</script>
 </body>
