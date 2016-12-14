@@ -63,14 +63,14 @@
                 var link = $(this).find('link').attr('href');
 
                 if (summary.length > 600) {
-                    $('#artikelDiv' + idCount).append('<div id="contentDiv' + idCount + '"class="panel-collapse collapse out"></div>');
-                    $('#artikelDiv' + idCount).append('<a data-toggle="collapse" href="#contentDiv' + idCount + '"> Läs mer </a>');
-                    $('#contentDiv' + idCount).append('<p>' + summary + '</p>');
-                    $('#contentDiv' + idCount).append('<a href="' + link + '" target="_blank" >' + 'Läs hela artikeln' + '</a>');
+                    $('#artikelDiv' + idCount).append('<div id="contentDiv' + idCount + '"class="panel-collapse collapse out"></div>')
+                    $('#artikelDiv' + idCount).append('<a data-toggle="collapse" href="#contentDiv' + idCount + '"> Läs mer </a>')
+                    $('#contentDiv' + idCount).append('<p>' + summary + '</p>')
+                    $('#contentDiv' + idCount).append('<a target="_blank" href="' + link + '">' + 'Läs hela artikeln' + '</a>');
                 }
                 else {
                     $('#artikelDiv' + (idCount)).append('<p>' + summary + '</p>')
-                    $('#artikelDiv' + idCount).append('<a href=" '+ link +' " target="_blank" >' + 'Läs hela artikeln' + '</a>')
+                    $('#artikelDiv' + idCount).append('<a href="' + link + '">' + 'Läs hela artikeln' + '</a>')
                 }
                 idCount++;
                 $('#artikelDiv' + (idCount++)).append('</div>')
