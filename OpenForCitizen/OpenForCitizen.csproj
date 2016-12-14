@@ -274,7 +274,6 @@
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\Home\LevelOfPain.cshtml" />
-    <Content Include="Views\Home\Sick.old.cshtml" />
     <Content Include="Views\Home\InformationOmVarden.cshtml" />
     <Content Include="Views\Home\illnessInfo.cshtml" />
     <Content Include="Views\Home\Questions.cshtml" />
