@@ -33,7 +33,6 @@
     <script>
         $(document).ready(function () {
             $.ajax({
-
                 url: "@Url.Action("searchIllness", "Home")",
                 data: {
                     illness: "ögon"
@@ -41,7 +40,6 @@
                 success: queryData,
                 error: function (data) {
                     $("#loadingIcon").hide();
-                    alert("error");
                 },
                 type: "POST"
             });
@@ -68,6 +66,10 @@
                     $('#contentDiv' + idCount).append('<p>' + summary + '</p>')
                     $('#contentDiv' + idCount).append('<a target="_blank" href="' + link + '">' + 'Läs hela artikeln' + '</a>');
                 }
+                else if (summary.length == 0) {
+                    $('#artikelDiv' + idCount).append('<p> Finns ingen summering</p>')
+                    $('#artikelDiv' + idCount).append('<a href=" ' + link + ' " target="_blank" >' + 'Läs hela artikeln' + '</a>')
+                }
                 else {
                     $('#artikelDiv' + (idCount)).append('<p>' + summary + '</p>')
                     $('#artikelDiv' + idCount).append('<a href="' + link + '">' + 'Läs hela artikeln' + '</a>')
@@ -86,7 +88,7 @@
     </div>
 
 
-    <div class="container" id="containerDiv">
+    <div class="container col-md-12 text-center" id="containerDiv">
         <h1 align="center" style="color:white">
         @{if (Session["illness"] != null) { @Html.Raw(Session["illness"].ToString()); } } problem kan bero på följande</h1>
     </div>
