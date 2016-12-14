@@ -15,6 +15,7 @@ namespace OpenForCitizen.Controllers
 {
     public class HomeController : Controller
     {
+       public string illness_search;
         public ActionResult Index()
         {
             return View();
@@ -50,12 +51,15 @@ namespace OpenForCitizen.Controllers
 
         public ActionResult illnessInfo(string illness)
         {
+           // illness_search = illness;
+            Session["illness"] = illness;
             Debug.Write("\n\n Illness: " + illness);
             return View();
         }
         [HttpPost]
         public string searchIllness(string illness)
         {
+            
             // Create a request for the URL. 
             WebRequest request = WebRequest.Create("http://www.1177.se/api/v2/artiklar/?antal=4&key=cc7f8361f7eb4e51b46c95d376c7010a");
             // If required by the server, set the credentials.
