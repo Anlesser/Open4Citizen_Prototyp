@@ -1,20 +1,21 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Web.Mvc;
+using Microsoft.Ajax.Utilities;
 
 namespace OpenForCitizen.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult Menu(string language)
+        public ActionResult Menu()
         {
-            Debug.Write("\n\n Language: " + language);
             ViewBag.Message = "Menu";
             return View();
         }
@@ -68,7 +69,47 @@ namespace OpenForCitizen.Controllers
             reader.Close();
             response.Close();
             return responseFromServer;
+        }
 
+        private string mouthCareOpeningHours(string dayOfWeek)
+        {
+            if (dayOfWeek == DayOfWeek.Friday.ToString())
+                return "07:30 - 16:00";
+            if (dayOfWeek == DayOfWeek.Saturday.ToString() || dayOfWeek == DayOfWeek.Sunday.ToString())
+                return "Stängt";
+            return "07:30 - 17:00";
+        } 
+
+        private string vcOpeninghours(string dayOfWeek)
+        {
+            if (dayOfWeek != DayOfWeek.Sunday.ToString() || dayOfWeek != DayOfWeek.Saturday.ToString())
+                return "08:00 - 17:00";
+            return "Stängt";
+        }
+
+        public string openingHours(string healthplace)
+        {
+            var dayOfWeek = DateTime.Today.DayOfWeek;
+            return healthplace == "vardcentralen" ? vcOpeninghours(dayOfWeek.ToString()) : mouthCareOpeningHours(dayOfWeek.ToString());
+        }
+
+        private string vcPhonehours(string dayOfWeek)
+        {
+            if (dayOfWeek != DayOfWeek.Sunday.ToString() || dayOfWeek != DayOfWeek.Saturday.ToString())
+                return "08:15 - 09:30 och 13-14";
+            return "Stängt";
+        }
+        public string phoneHours(string healthplace)
+        {
+            var dayOfWeek = DateTime.Today.DayOfWeek;
+            return healthplace == "vardcentralen" ? vcPhonehours(dayOfWeek.ToString()) : mouthCareOpeningHours(dayOfWeek.ToString());
+        }
+
+        public ActionResult sendMail(string name, string email, string message, string to )
+        {
+            Debug.Write("\nName:"+ name + "\nemail:" + email + "\nMessage:"+ message + "\nFrom:" + to);
+
+            return RedirectToAction("Questions", "Home");
         }
 
     }
