@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OpenForCitizen.App_LocalResources {
+namespace OpenForCitizen.Resources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace OpenForCitizen.App_LocalResources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Menu {
+    public class Blurgas {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Menu() {
+        internal Blurgas() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace OpenForCitizen.App_LocalResources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OpenForCitizen.App_LocalResources.Menu", typeof(Menu).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OpenForCitizen.Resources.Blurgas", typeof(Blurgas).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,58 +61,11 @@ namespace OpenForCitizen.App_LocalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Det är halt ute så gå försiktigt.
-        ///
-        ///Magsjukan sprider sig i denna tid så var noga med att tvätta händerna..
+        ///   Looks up a localized string similar to THIS IS DEFAULT, swedish.
         /// </summary>
-        public static string BannerText {
+        public static string SomeThing {
             get {
-                return ResourceManager.GetString("BannerText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Aktuell information.
-        /// </summary>
-        public static string BannerTitle {
-            get {
-                return ResourceManager.GetString("BannerTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Frisk.
-        /// </summary>
-        public static string BtnHealthy {
-            get {
-                return ResourceManager.GetString("BtnHealthy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Information.
-        /// </summary>
-        public static string BtnInfo {
-            get {
-                return ResourceManager.GetString("BtnInfo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Frågor.
-        /// </summary>
-        public static string BtnQuestions {
-            get {
-                return ResourceManager.GetString("BtnQuestions", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Sjuk.
-        /// </summary>
-        public static string BtnSick {
-            get {
-                return ResourceManager.GetString("BtnSick", resourceCulture);
+                return ResourceManager.GetString("SomeThing", resourceCulture);
             }
         }
     }

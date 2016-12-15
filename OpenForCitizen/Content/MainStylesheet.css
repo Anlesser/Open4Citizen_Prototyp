@@ -3,4 +3,9 @@
             background-size: cover;
             background-position:center center;
             background-attachment:fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana,sans-serif;
         }
+
+    p {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana,sans-serif;
+    }
