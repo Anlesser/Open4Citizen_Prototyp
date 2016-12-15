@@ -3,6 +3,8 @@
     ViewBag.Title = "Questions";
 }
 <head>
+    <title>Frågor</title>
+
     <link rel="stylesheet" type="text/css" href="~/Content/MainStylesheet.css">
     <style>
         .glyphicon {
@@ -28,12 +30,10 @@
             border-radius: 25px;
         }
 
-        h2 {
-            font-size: 10vmin;
-        }
+
 
         p {
-            font-size: 4vmin;
+            font-size: 3vmin;
         }
 
         .textbox {
@@ -56,38 +56,61 @@
     </style>
 </head>
 
-<div class="row">
-    <div class="col-xs-10 col-centered text-center">
-        <div class="textbox">
-            <h2>Frågor?</h2>
-            <p class="bold">
-                Ring oss, så hjälper vi dig
-            </p>
-            <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
-            <p style="font-weight:bold"> 054 123 456</p>
+@*<div class="row">
+        <div class="col-xs-10 col-centered text-center">
+            <div class="textbox">
+                <h2>Frågor?</h2>
+                <p class="bold">
+                    Ring oss, så hjälper vi dig
+                </p>
+                <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                <p style="font-weight: bold"> 054 123 456</p>
+            </div>
         </div>
-    </div>
-</div>
+    </div>*@
+<script type="text/javascript">
+    function getOpeninghours(location) {
+        $.ajax({
+            url: "@Url.Action("openingHours", "Home")",
+            data: { healthplace: location },
+            success: function (data) {
+                if (location === "vardcentralen") {
+                    $("#vardcentralen").text(data);
+                }
+                else { $("#folktandvarden").text(data); }
+            },
+            type: "POST"
+        });
+    }
+</script>
 <div class="row" style="margin-top:20px">
     <div class="col-xs-10 col-md-6">
         <img class="VC" src="~/Pictures/krpVC.JPG" />
     </div>
-    <div class="col-xs-10 col-md-6 text-center">
-        <div class="textbox">
-            <p>
-                <strong>Telefontider:</strong>
-            </p>
 
-            <p>Mån-fre 08:15–09:30 <br />Mån-fre 13–14</p>
-        </div>
+    @*<div class="col-xs-10 col-md-6 text-center">*@
         <div class="textbox">
+
+            <script>getOpeninghours("vardcentralen");</script>
+            <script>getOpeninghours("folktandvarden");</script>
+
+            <h4><b>Öppettider idag:</b></h4>
+            <p id="vardcentralen"></p>
+
+
+            <h4><b>Telefontider idag:</b></h4>
+            <p id="folktandvarden"></p>
+        </div>
+
+    </div>
+    @*<div class="textbox">
             <p>
                 Skicka annars ett mail till:
                 <a href="mailto:mail@exempel.se?subject=Min Fråga">mail@exempel.se</a>
                 så svarar vi inom kort
             </p>
-        </div>
-    </div>
+        </div>*@
+</div>
 </div>
 
 

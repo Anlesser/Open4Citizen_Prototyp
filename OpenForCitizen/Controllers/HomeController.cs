@@ -1,7 +1,9 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Web.Mvc;
+using Microsoft.Ajax.Utilities;
 
 namespace OpenForCitizen.Controllers
 {
@@ -69,8 +71,30 @@ namespace OpenForCitizen.Controllers
             reader.Close();
             response.Close();
             return responseFromServer;
-
         }
 
+        private string mouthCareOpeningHours(string dayOfWeek)
+        {
+            if (dayOfWeek == DayOfWeek.Friday.ToString())
+                return "07:30 - 16:00";
+            if (dayOfWeek == DayOfWeek.Saturday.ToString() || dayOfWeek == DayOfWeek.Sunday.ToString())
+                return "Stängt";
+            return "07:30 - 17:00";
+        } 
+
+        private string vcOpeninghours(string dayOfWeek)
+        {
+            if (dayOfWeek != DayOfWeek.Sunday.ToString() || dayOfWeek != DayOfWeek.Saturday.ToString())
+                return "08:00 - 17:00";
+            return "Stängt";
+        }
+
+        public string openingHours(string healthplace)
+        {
+            var dayOfWeek = DateTime.Today.DayOfWeek;
+            if (healthplace == "vardcentralen") {   return vcOpeninghours(dayOfWeek.ToString());      }
+            else   {    return mouthCareOpeningHours(dayOfWeek.ToString());}
+        }
+    
     }
 }
