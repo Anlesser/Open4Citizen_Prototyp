@@ -1,4 +1,5 @@
-﻿@{
+﻿@using OpenForCitizen.Controllers
+@{
     ViewBag.Title = "Home Page";
 }
 <head>
@@ -29,16 +30,16 @@
          <div class="row">
              
                  <div class="col-md-4 col-sm-4 ">
-                     <form action="@Url.Action("Menu", "Home", new { language= "swedish" })" method="post">
-                         <button class="btn btn-default btn-group-lg menulayout" >
-                             <p style="font-size:xx-large; ">Hej</p>
-                             <p style="font-size:medium; ">Svenska</p>
+                     <form action="@Url.Action("SetCulture", "Language", new { culture = "se" })" method="post">
+                         <button class="btn btn-default btn-grovup-lg menulayout" >
+                             <p style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Hej</p>
+                             <p style="font-size:medium; font-family:'Segoe UI',  Tahoma, Geneva, Verdana, sans-serif">Svenska</p>
                          </button>
                      </form>
                 </div>
              
             <div class="col-md-4 col-sm-4" >
-                <form action="@Url.Action("Menu", "Home", new { language= "english" })" method="post">
+                <form action="@Url.Action("SetCulture", "Language", new { culture = "en" })" method="post">
                     <button class="btn btn-default btn-group-lg menulayout" >
                         <p style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Hello</p>
                         <p style="font-size:small; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">English</p>
@@ -47,7 +48,7 @@
             </div>
 
              <div class="col-md-4 col-sm-4" style="">
-                 <form action="@Url.Action("Menu", "Home", new { language= "spanish" })" method="post">
+                 <form action="@Url.Action("SetCulture", "Language", new { culture = "es" })" method="post">
                      <button class="btn btn-default btn-group-lg menulayout" >
                          <p style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Hola</p>
                          <p style="font-size:small; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Español</p>
