@@ -1,10 +1,12 @@
-﻿@{
+﻿<!DOCTYPE html>
+@{
     ViewBag.Title = "illnessInfo";
 }
 
 
-<link rel="stylesheet" type="text/css" href="~/Content/MainStylesheet.css">
+
 <head>
+    <link rel="stylesheet" type="text/css" href="~/Content/MainStylesheet.css">
     <title>Illness info</title>
 
     <style>
@@ -17,17 +19,6 @@
             background-color: #e6e6e6;
             border-radius: 5px;
         }
-
-        .loader {
-            border: 16px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 16px solid #3498db;
-            width: 120px;
-            height: 120px;
-            -webkit-animation: spin 2s linear infinite;
-            animation: spin 2s linear infinite;
-        }
-
     </style>
     <script type="text/javascript" src="~/Scripts/body-check.js">
     </script>
@@ -52,12 +43,10 @@
 
     <script type="text/javascript">
         function queryData(xmldata) {
-            $("#loadingIcon").hide();
-            $("#containerDiv").show();
             var idCount = 1;
             $(xmldata).find("entry").each(function () {
 
-                $("#containerDiv").append('<div class="col-md-12" id="artikelDiv' + idCount + '" style="background-color:white; border-radius: 15px; margin:15px; padding-top:5px; padding-bottom:10px">')
+                $("#containerDiv").append('<div class="col-md-12" id="artikelDiv' + idCount + '" style="background-color:white; border-radius: 15px; margin:15px; padding-top:5px; padding-bottom:10px; border-width:3px; border-color:gray; border-style:solid;">')
                 $('#artikelDiv' + idCount).append('<h2>' + $(this).find("title").text() + '</h2>')
                 var summary = $(this).find("summary").text();
                 var link = $(this).find('link').attr('href');
@@ -79,20 +68,28 @@
                 idCount++;
                 $('#artikelDiv' + (idCount++)).append('</div>')
             });
+            $("#loadingIcon").hide();
+            document.getElementById("containerDiv").style.display = "block"; // döljer loader och visar texten
         }
     </script>
 </head>
 
 <body>
 
-    <div id="loadingIcon" class="text-center">
-        <img style="width:150px" src="~/Pictures/loading.gif" />
-    </div>
+    <div id="loadingIcon" class="loader"></div>
 
-
-    <div class="container col-md-12 text-center" id="containerDiv">
+    <div class="container col-md-12 text-center animate-bottom" id="containerDiv">
         <h1 align="center" style="color:white">
-        @{if (Session["illness"] != null) { @Html.Raw(Session["illness"].ToString()); } } problem kan bero på följande</h1>
+            @{if (Session["illness"] != null)
+                {
+                    string illness = Session["illness"].ToString();
+                    //if (illness.Substring(illness.Length-1) != "s")
+                    //{
+                    //    illness += "s"; // lägger till s på slutet av problemområdet.
+                    //}
+                    @Html.Raw(illness);
+                } }problem kan bero på följande
+        </h1>
     </div>
     <script>$("#containerDiv").hide();</script>
 </body>
