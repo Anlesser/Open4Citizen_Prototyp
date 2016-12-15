@@ -61,7 +61,7 @@ namespace OpenForCitizen.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Frisk.
+        ///   Looks up a localized string similar to Håll dig frisk.
         /// </summary>
         public static string BtnHealth {
             get {

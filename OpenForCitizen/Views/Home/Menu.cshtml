@@ -1,12 +1,9 @@
-﻿@using OpenForCitizen.Resources
+﻿@using Antlr.Runtime.Tree
+@using OpenForCitizen.Resources
 @using OpenForCitizen.Controllers
 @{
     ViewBag.Title = "Menu";
 }
-
-
-
-
 <head>
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="~/Scripts/jquery-1.10.2.intellisense.js"></script>
@@ -58,7 +55,7 @@
             <div class="col-md-6 col-sm-6">
                 <button class="btn btn-default btn-group-lg menulayout">
                     <span class="glyphicon glyphicon-heart" style="font-size:40px;margin-top:auto; color:red"></span>
-                    <div style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Håll dig frisk</div>
+                    <div style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">@Menu.BtnHealth</div>
                 </button>
             </div>
 
@@ -66,7 +63,7 @@
                 <form action="@Url.Action("sick", "Home")">
                     <button class="btn btn-default btn-group-lg menulayout">
                         <span class="glyphicon glyphicon-user" style="font-size:40px;margin-top:auto; color:#ff6a00"></span>
-                        <div style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Sjuk</div>
+                        <div style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">@Menu.BtnSick</div>
                     </button>
                 </form>
             </div>
@@ -76,7 +73,7 @@
                 <form action="@Url.Action("InformationOmVarden", "Home")">
                     <button class="btn btn-default btn-group-lg menulayout">
                         <span class="glyphicon glyphicon-info-sign" style="font-size:40px;margin-top:auto; color:mediumseagreen"></span>
-                        <div style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Information</div>
+                        <div style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">@Menu.BtnInfo</div>
                     </button>
                 </form>
             </div>
@@ -85,7 +82,7 @@
                 <form action="@Url.Action("Questions","Home")">
                     <button class="btn btn-default btn-group-lg menulayout">
                         <span class="glyphicon glyphicon-question-sign" style="font-size:40px;margin-top:auto; color:cornflowerblue"></span>
-                        <div style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Frågor</div>
+                        <div style="font-size:xx-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">@Menu.BtnQuestions</div>
                     </button>
                 </form>
             </div>
