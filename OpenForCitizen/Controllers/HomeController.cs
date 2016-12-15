@@ -1,20 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
-using System.Web;
 using System.Web.Mvc;
-using System.Xml;
-using System.Diagnostics;
-using System.Net;
+using Microsoft.Ajax.Utilities;
 
 namespace OpenForCitizen.Controllers
 {
     public class HomeController : BaseController
     {
+        public string illness_search;
         public ActionResult Index()
         {
             return View();
@@ -40,7 +35,7 @@ namespace OpenForCitizen.Controllers
             ViewBag.Message = "Questions ?";
             return View();
         }
-     
+
 
         public ActionResult InformationOmVarden()
         {
@@ -49,34 +44,56 @@ namespace OpenForCitizen.Controllers
 
         public ActionResult illnessInfo(string illness)
         {
+            // illness_search = illness;
+            Session["illness"] = illness;
             Debug.Write("\n\n Illness: " + illness);
             return View();
         }
         [HttpPost]
         public string searchIllness(string illness)
         {
+
             // Create a request for the URL. 
-            WebRequest request = WebRequest.Create(
-              "http://www.1177.se/api/v2/artiklar/?antal=4&cat=ögon&key=cc7f8361f7eb4e51b46c95d376c7010a");
+            WebRequest request = WebRequest.Create("http://www.1177.se/api/v2/artiklar/?antal=4&key=cc7f8361f7eb4e51b46c95d376c7010a");
             // If required by the server, set the credentials.
             request.Credentials = CredentialCache.DefaultCredentials;
             // Get the response.
             WebResponse response = request.GetResponse();
-            // Display the status.
-            Console.WriteLine(((HttpWebResponse)response).StatusDescription);
             // Get the stream containing content returned by the server.
             Stream dataStream = response.GetResponseStream();
             // Open the stream using a StreamReader for easy access.
+
             StreamReader reader = new StreamReader(dataStream);
             // Read the content.
             string responseFromServer = reader.ReadToEnd();
-            // Display the content.
-            Debug.WriteLine(responseFromServer);
             // Clean up the streams and the response.
             reader.Close();
             response.Close();
             return responseFromServer;
         }
 
+        private string mouthCareOpeningHours(string dayOfWeek)
+        {
+            if (dayOfWeek == DayOfWeek.Friday.ToString())
+                return "07:30 - 16:00";
+            if (dayOfWeek == DayOfWeek.Saturday.ToString() || dayOfWeek == DayOfWeek.Sunday.ToString())
+                return "Stängt";
+            return "07:30 - 17:00";
+        } 
+
+        private string vcOpeninghours(string dayOfWeek)
+        {
+            if (dayOfWeek != DayOfWeek.Sunday.ToString() || dayOfWeek != DayOfWeek.Saturday.ToString())
+                return "08:00 - 17:00";
+            return "Stängt";
+        }
+
+        public string openingHours(string healthplace)
+        {
+            var dayOfWeek = DateTime.Today.DayOfWeek;
+            if (healthplace == "vardcentralen") {   return vcOpeninghours(dayOfWeek.ToString());      }
+            else   {    return mouthCareOpeningHours(dayOfWeek.ToString());}
+        }
+    
     }
 }
