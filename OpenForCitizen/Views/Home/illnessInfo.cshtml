@@ -5,6 +5,8 @@
 
 <link rel="stylesheet" type="text/css" href="~/Content/MainStylesheet.css">
 <head>
+    <title>Illness info</title>
+
     <style>
         .artikellayout {
             background-color: red;
@@ -66,7 +68,7 @@
                     $('#contentDiv' + idCount).append('<p>' + summary + '</p>')
                     $('#contentDiv' + idCount).append('<a target="_blank" href="' + link + '">' + 'Läs hela artikeln' + '</a>');
                 }
-                else if (summary.length == 0) {
+                else if (summary.length === 0) {
                     $('#artikelDiv' + idCount).append('<p> Finns ingen summering</p>')
                     $('#artikelDiv' + idCount).append('<a href=" ' + link + ' " target="_blank" >' + 'Läs hela artikeln' + '</a>')
                 }
