@@ -117,24 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BannerText" xml:space="preserve">
-    <value>Det är halt ute så gå försiktigt.
-
-Magsjukan sprider sig i denna tid så var noga med att tvätta händerna.</value>
-  </data>
-  <data name="BannerTitle" xml:space="preserve">
-    <value>Aktuell information</value>
-  </data>
-  <data name="BtnHealthy" xml:space="preserve">
-    <value>Frisk</value>
+  <data name="BtnHealth" xml:space="preserve">
+    <value>Health</value>
   </data>
   <data name="BtnInfo" xml:space="preserve">
     <value>Information</value>
   </data>
   <data name="BtnQuestions" xml:space="preserve">
-    <value>Frågor</value>
+    <value>Questions</value>
   </data>
   <data name="BtnSick" xml:space="preserve">
-    <value>Sjuk</value>
+    <value>Sick</value>
+  </data>
+  <data name="InfoText" xml:space="preserve">
+    <value>It's cold and slippery outside  so be carefull!
+
+The flu is spreading so wash your hands extra carefull to prevent spread.</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Important Information</value>
   </data>
 </root>

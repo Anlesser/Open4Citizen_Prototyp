@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OpenForCitizen.App_LocalResources {
+namespace OpenForCitizen.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace OpenForCitizen.App_LocalResources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OpenForCitizen.App_LocalResources.Menu", typeof(Menu).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OpenForCitizen.Resources.Menu", typeof(Menu).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,31 +61,11 @@ namespace OpenForCitizen.App_LocalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Det är halt ute så gå försiktigt.
-        ///
-        ///Magsjukan sprider sig i denna tid så var noga med att tvätta händerna..
-        /// </summary>
-        public static string BannerText {
-            get {
-                return ResourceManager.GetString("BannerText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Aktuell information.
-        /// </summary>
-        public static string BannerTitle {
-            get {
-                return ResourceManager.GetString("BannerTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Frisk.
         /// </summary>
-        public static string BtnHealthy {
+        public static string BtnHealth {
             get {
-                return ResourceManager.GetString("BtnHealthy", resourceCulture);
+                return ResourceManager.GetString("BtnHealth", resourceCulture);
             }
         }
         
@@ -113,6 +93,26 @@ namespace OpenForCitizen.App_LocalResources {
         public static string BtnSick {
             get {
                 return ResourceManager.GetString("BtnSick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Just nu är det väldigt halt så var försiktig!
+        ///
+        ///Det är även influensa tider just nu så tvätta händerna noga.
+        /// </summary>
+        public static string InfoText {
+            get {
+                return ResourceManager.GetString("InfoText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aktuell information.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
     }

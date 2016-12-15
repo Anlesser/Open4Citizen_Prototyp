@@ -13,16 +13,15 @@ using System.Net;
 
 namespace OpenForCitizen.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult Menu(string language)
+        public ActionResult Menu()
         {
-            Debug.Write("\n\n Language: " + language);
             ViewBag.Message = "Menu";
             return View();
         }
