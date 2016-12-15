@@ -3,7 +3,7 @@
     ViewBag.Title = "Information";
 }
 
-<script src="~/scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/jquery-1.12.2.min.js"></script>
 <head>
     <link rel="stylesheet" type="text/css" href="~/Content/MainStylesheet.css">
 
@@ -23,6 +23,7 @@
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
+
     }
     
     .videopic {
@@ -46,6 +47,7 @@
         background-color: rgb(0,0,0);
         background-color: rgba(0,0,0,0.9);
         overflow-x: hidden;
+        
     }
 
     .overlay-content {
@@ -55,6 +57,7 @@
         width: 90%;
         height: auto;
         margin-top: 30px;
+        
     }
 
     .overlay .closebtn {
@@ -64,6 +67,7 @@
     padding-right: 5%;
     font-size: 60px;
 }
+  
 </style>
 <h1 class="text-center" style="color:white">Vem gör vad i vården?</h1>
 
@@ -132,7 +136,8 @@
             else { document.getElementById("video-objekt").innerHTML = '<iframe class="videoWrapper-iframe" src="https://www.youtube.com/embed/L1vlK2o7fwg" frameborder="0" allowfullscreen></iframe>' }
         document.getElementById("myNav").style.width = "100%";
             document.getElementById("homeIcon").style.visibility = "hidden";
-        document.getElementById("backIcon").style.visibility = "hidden";
+            document.getElementById("backIcon").style.visibility = "hidden";
+            $("body").css("overflow", "hidden");
 
 }
 
@@ -143,8 +148,8 @@ function closeNav() {
     document.getElementById("homeIcon").style.visibility = "visible";
     document.getElementById("backIcon").style.visibility = "visible";
    
-    var myPlayer = document.getElementById('film');
-    myPlayer.stopVideo();
+    $("body").css("overflow", "auto");
+  
 }
 
     </script>
