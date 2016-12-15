@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="~/Content/MainStylesheet.css">
     <style>
         .glyphicon {
-            font-size: 30px;
+            font-size: 20px;
         }
 
         .col-centered {
@@ -30,10 +30,12 @@
             border-radius: 15px;
         }
 
-
+        text {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana,sans-serif;
+        }
 
         p {
-            font-size: 3vmin;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana,sans-serif;
         }
 
         .textbox {
@@ -75,47 +77,75 @@
             data: { healthplace: location },
             success: function (data) {
                 if (location === "vardcentralen") {
-                    $("#vardcentralen").text(data);
+                    $("#VCopen").text(data);
                 }
-                else { $("#folktandvarden").text(data); }
+                else { $("#FTVopen").text(data); }
             },
             type: "POST"
         });
     }
+    function getPhonehours(location) {
+        $.ajax({
+            url: "@Url.Action("phoneHours", "Home")",
+            data: { healthplace: location },
+            success: function (data) {
+                if (location === "vardcentralen") {
+                    $("#VCtele").text(data);
+                }
+                else { $("#FTVtele").text(data); }
+            },
+            type: "POST"
+        });
+    }
+
 </script>
 <div class="row" style="margin-top:20px">
     <div class="col-xs-12 col-md-6">
-        <img class="VC" src="~/Pictures/krpVC.JPG" />
+        <img class="VC" src="~/Pictures/krpVC.JPG" alt="" />
     </div>
-    <div class="col-xs-12 col-md-6 text-center">
+    <div class="col-xs-12 col-md-6 ">
         <div class="textbox">
-
+            <h2> Vårdcentralen Kronoparken</h2>
             <script>getOpeninghours("vardcentralen");</script>
-            <script>getOpeninghours("folktandvarden");</script>
+            <script>getPhonehours("vardcentralen");</script>
 
-            <h4><b>Öppettider idag:</b></h4>
-            <p id="vardcentralen"></p>
-
-
-            <h4><b>Telefontider idag:</b></h4>
-            <p id="folktandvarden"></p>
-        </div>
-
-    </div>
-    @*<div class="textbox">
-            <p>
-                Skicka annars ett mail till:
-                <a href="mailto:mail@exempel.se?subject=Min Fråga">mail@exempel.se</a>
-                så svarar vi inom kort
+            <p style="font-size: 18px">
+                <b>Öppettider idag:</b>
+                <text id="VCopen"></text>
             </p>
+            <p style="font-size: 18px">
+                <b>Telefontider idag:</b>
+                <text id="VCtele"></text>
+            </p>
+            <p style="font-size: 18px">
+                <span class="glyphicon glyphicon-earphone"></span>
+                <text>054-61 69 65 </text>
+            </p>
+            <p style="font-size: 18px">Eller maila oss:</p>
+
+            <form class="form-register" id="registerForm" action="@Url.Action("sendMail","Home", new {to="VC"})" method="post">
+                <label for="form_mail">Namn *</label>
+                <input id="form_name" style="border-radius: 15px" type="text" name="name" class="form-control" placeholder="Skriv in ditt namn *" required="required" data-error="Name is required.">
+                <div class="help-block with-errors"></div>
+
+                <label for="form_mail">Mail *</label>
+                <input id="form_mail" style="border-radius: 15px" type="email" name="email" class="form-control" placeholder="Skriv in din mail *" required="required" data-error="Email is required.">
+                <div class="help-block with-errors"></div>
+
+                <label for="form_message">Meddelande *</label>
+                <textarea id="form_message"style="border-radius: 15px"  name="message" class="form-control" placeholder="Skriv ditt meddelande*" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                <div class="help-block with-errors"></div>
+                <button id="send" class="btn btn-lg btn-success btn-block" type="submit" style="width: 150px">Skicka</button>
+            </form>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12 text-center">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1015.2822837938216!2d13.57905387188309!3d59.406976918271376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf02b271728a2997!2sKronoparken+V%C3%A5rdcentral!5e0!3m2!1ssv!2sse!4v1481724459294" 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1015.2822837938216!2d13.57905387188309!3d59.406976918271376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf02b271728a2997!2sKronoparken+V%C3%A5rdcentral!5e0!3m2!1ssv!2sse!4v1481724459294"
                     style="border-radius:15px; height:auto; width:100%; margin-top:10px;" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
+
 </div>
 
 

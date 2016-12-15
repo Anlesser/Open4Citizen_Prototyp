@@ -92,9 +92,27 @@ namespace OpenForCitizen.Controllers
         public string openingHours(string healthplace)
         {
             var dayOfWeek = DateTime.Today.DayOfWeek;
-            if (healthplace == "vardcentralen") {   return vcOpeninghours(dayOfWeek.ToString());      }
-            else   {    return mouthCareOpeningHours(dayOfWeek.ToString());}
+            return healthplace == "vardcentralen" ? vcOpeninghours(dayOfWeek.ToString()) : mouthCareOpeningHours(dayOfWeek.ToString());
         }
-    
+
+        private string vcPhonehours(string dayOfWeek)
+        {
+            if (dayOfWeek != DayOfWeek.Sunday.ToString() || dayOfWeek != DayOfWeek.Saturday.ToString())
+                return "08:15 - 09:30 och 13-14";
+            return "Stängt";
+        }
+        public string phoneHours(string healthplace)
+        {
+            var dayOfWeek = DateTime.Today.DayOfWeek;
+            return healthplace == "vardcentralen" ? vcPhonehours(dayOfWeek.ToString()) : mouthCareOpeningHours(dayOfWeek.ToString());
+        }
+
+        public ActionResult sendMail(string name, string email, string message, string to )
+        {
+            Debug.Write("\nName:"+ name + "\nemail:" + email + "\nMessage:"+ message + "\nFrom:" + to);
+
+            return RedirectToAction("Questions", "Home");
+        }
+
     }
 }
