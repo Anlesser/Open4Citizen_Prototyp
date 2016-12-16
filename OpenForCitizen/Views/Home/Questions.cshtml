@@ -123,17 +123,17 @@
             </p>
             <p style="font-size: 18px">Eller maila oss:</p>
 
-            <form class="form-register" id="registerForm" action="@Url.Action("sendMail","Home", new {to="VC"})" method="post">
+            <form class="form-register" id="registerForm" action="@Url.Action("sendMail","Home", new {emailTo="VCkronoparken@gmail.com"})" method="post">
                 <label for="form_mail">Namn *</label>
                 <input id="form_name" style="border-radius: 15px" type="text" name="name" class="form-control" placeholder="Skriv in ditt namn *" required="required" data-error="Name is required.">
                 <div class="help-block with-errors"></div>
 
                 <label for="form_mail">Mail *</label>
-                <input id="form_mail" style="border-radius: 15px" type="email" name="email" class="form-control" placeholder="Skriv in din mail *" required="required" data-error="Email is required.">
+                <input id="form_mail" style="border-radius: 15px" type="email" name="emailFrom" class="form-control" placeholder="Skriv in din mail *" required="required" data-error="Email is required.">
                 <div class="help-block with-errors"></div>
 
                 <label for="form_message">Meddelande *</label>
-                <textarea id="form_message"style="border-radius: 15px"  name="message" class="form-control" placeholder="Skriv ditt meddelande*" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                <textarea id="form_message"style="border-radius: 15px"  name="messageFromUser" class="form-control" placeholder="Skriv ditt meddelande*" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                 <div class="help-block with-errors"></div>
                 <button id="send" class="btn btn-lg btn-success btn-block" type="submit" style="width: 150px">Skicka</button>
             </form>
