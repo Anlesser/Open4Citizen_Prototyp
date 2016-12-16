@@ -18,20 +18,20 @@
     <script>
         $(document).ready(function () {
             $('#backIcon').hover(function () {
-                $(this).css('color', ' #24478f');
+                $(this).css('color', ' lightgray');
                 $(this).click(function () {
                     parent.history.back();
                 });
             }, function () {
-                $(this).css("color", "#8ba1cf");
+                $(this).css("color", "gray");
             });
         });
 
         $(document).ready(function () {
             $('#homeIcon').hover(function () {
-                $(this).css('color', '#24478f');
+                $(this).css('color', 'lightgray');
             }, function () {
-                $(this).css("color", "#8ba1cf");
+                $(this).css("color", "gray");
             });
         });
 
@@ -46,14 +46,14 @@
                     <div class="col-lg-6 col-md-6 col-sm-6" style="float:left">
                         <ul class="nav navbar-nav navbar-left">
                             <li>
-                                <a class="glyphicon glyphicon-arrow-left" id="backIcon" style="color:#8ba1cf; font-size:50px; float:left" href="#"></a>
+                                <a class="glyphicon glyphicon-arrow-left" id="backIcon" style="color:gray; font-size:50px; float:left" href="#"></a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6" style="float:right">
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a class="glyphicon glyphicon-home" id="homeIcon" style="color:#8ba1cf; font-size:50px; float:right"
+                                <a class="glyphicon glyphicon-home" id="homeIcon" style="color:gray; font-size:50px; float:right"
                                    href="@Url.Action("Index","Home")"></a>
                             </li>
                         </ul>
