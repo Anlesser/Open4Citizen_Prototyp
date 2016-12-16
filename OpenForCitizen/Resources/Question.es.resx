@@ -117,19 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Dentist" xml:space="preserve">
-    <value>Tandläkare</value>
+  <data name="Mail" xml:space="preserve">
+    <value>Correo electrónico</value>
   </data>
-  <data name="Doctor" xml:space="preserve">
-    <value>Läkare</value>
+  <data name="MailUs" xml:space="preserve">
+    <value>O envíenos un correo electrónico</value>
   </data>
-  <data name="Hygienist" xml:space="preserve">
-    <value>Tandhygienist</value>
+  <data name="Message" xml:space="preserve">
+    <value>Mensaje</value>
   </data>
-  <data name="Nurse" xml:space="preserve">
-    <value>Sjuksköterska</value>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
   </data>
-  <data name="Title" xml:space="preserve">
-    <value>Roller inom vården</value>
+  <data name="OpeningHours" xml:space="preserve">
+    <value>Horario de apertura</value>
+  </data>
+  <data name="PhoneHours" xml:space="preserve">
+    <value>Horas de teléfono</value>
+  </data>
+  <data name="PlaceholderMail" xml:space="preserve">
+    <value>Escriba su correo electrónico</value>
+  </data>
+  <data name="PlaceholderMessage" xml:space="preserve">
+    <value>Escriba su mensaje</value>
+  </data>
+  <data name="PlaceholderName" xml:space="preserve">
+    <value>Escribe tu nombre</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Enviar</value>
   </data>
 </root>

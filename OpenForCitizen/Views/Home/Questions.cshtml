@@ -1,4 +1,5 @@
-﻿
+﻿@using OpenForCitizen.Resources
+
 @{
     ViewBag.Title = "Questions";
 }
@@ -107,32 +108,32 @@
             <script>getPhonehours("vardcentralen");</script>
 
             <p style="font-size: 18px">
-                <b>Öppettider idag:</b>
+                <b>@Question.OpeningHours</b>
                 <text id="VCopen"></text>
             </p>
             <p style="font-size: 18px">
-                <b>Telefontider idag:</b>
+                <b>@Question.PhoneHours</b>
                 <text id="VCtele"></text>
             </p>
             <p style="font-size: 18px">
                 <span class="glyphicon glyphicon-earphone"></span>
                 <text>054-61 69 65 </text>
             </p>
-            <p style="font-size: 18px">Eller maila oss:</p>
+            <p style="font-size: 18px">@Question.MailUs</p>
 
             <form class="form-register" id="registerForm" action="@Url.Action("sendMail","Home", new {emailTo="VCkronoparken@gmail.com"})" method="post">
-                <label for="form_mail">Namn *</label>
-                <input id="form_name" style="border-radius: 15px" type="text" name="name" class="form-control" placeholder="Skriv in ditt namn *" required="required" data-error="Name is required.">
+                <label for="form_mail">@Question.Name</label>
+                <input id="form_name" style="border-radius: 15px" type="text" name="name" class="form-control" placeholder="@Question.PlaceholderName" required="required" data-error="Name is required.">
                 <div class="help-block with-errors"></div>
 
-                <label for="form_mail">Mail *</label>
-                <input id="form_mail" style="border-radius: 15px" type="email" name="emailFrom" class="form-control" placeholder="Skriv in din mail *" required="required" data-error="Email is required.">
+                <label for="form_mail">@Question.Mail</label>
+                <input id="form_mail" style="border-radius: 15px" type="email" name="emailFrom" class="form-control" placeholder="@Question.PlaceholderMail" required="required" data-error="Email is required.">
                 <div class="help-block with-errors"></div>
 
-                <label for="form_message">Meddelande *</label>
-                <textarea id="form_message" style="border-radius: 15px" name="messageFromUser" class="form-control" placeholder="Skriv ditt meddelande*" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                <label for="form_message">@Question.Message</label>
+                <textarea id="form_message" style="border-radius: 15px" name="messageFromUser" class="form-control" placeholder="@Question.PlaceholderMail" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                 <div class="help-block with-errors"></div>
-                <button id="send" class="btn btn-lg btn-success btn-block" type="submit" style="width: 150px">Skicka</button>
+                <button id="send" class="btn btn-lg btn-success btn-block" type="submit" style="width: 150px">@Question.Send</button>
             </form>
         </div>
     </div>
@@ -152,32 +153,32 @@
             <script>getPhonehours("folktandvården");</script>
 
             <p style="font-size: 18px">
-                <b>Öppettider idag:</b>
+                <b>@Question.OpeningHours</b>
                 <text id="FTVopen"></text>
             </p>
             <p style="font-size: 18px">
-                <b>Telefontider idag:</b>
+                <b>@Question.PhoneHours</b>
                 <text id="FTVtele"></text>
             </p>
             <p style="font-size: 18px">
                 <span class="glyphicon glyphicon-earphone"></span>
                 <text>054-61 69 50 </text>
             </p>
-            <p style="font-size: 18px">Eller maila oss:</p>
+            <p style="font-size: 18px">@Question.MailUs</p>
 
             <form class="form-register" id="registerForm" action="@Url.Action("sendMail","Home", new {emailTo="VCkronoparken@gmail.com"})" method="post">
-                <label for="form_mail">Namn *</label>
-                <input id="form_name" style="border-radius: 15px" type="text" name="name" class="form-control" placeholder="Skriv in ditt namn *" required="required" data-error="Name is required.">
+                <label for="form_mail">@Question.Name</label>
+                <input id="form_name" style="border-radius: 15px" type="text" name="name" class="form-control" placeholder="@Question.PlaceholderName" required="required" data-error="Name is required.">
                 <div class="help-block with-errors"></div>
 
-                <label for="form_mail">Mail *</label>
-                <input id="form_mail" style="border-radius: 15px" type="email" name="emailFrom" class="form-control" placeholder="Skriv in din mail *" required="required" data-error="Email is required.">
+                <label for="form_mail">@Question.Mail</label>
+                <input id="form_mail" style="border-radius: 15px" type="email" name="emailFrom" class="form-control" placeholder="@Question.PlaceholderMail" required="required" data-error="Email is required.">
                 <div class="help-block with-errors"></div>
 
-                <label for="form_message">Meddelande *</label>
-                <textarea id="form_message" style="border-radius: 15px" name="messageFromUser" class="form-control" placeholder="Skriv ditt meddelande*" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                <label for="form_message">@Question.Message</label>
+                <textarea id="form_message" style="border-radius: 15px" name="messageFromUser" class="form-control" placeholder="@Question.PlaceholderMessage" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                 <div class="help-block with-errors"></div>
-                <button id="send" class="btn btn-lg btn-success btn-block" type="submit" style="width: 150px">Skicka</button>
+                <button id="send" class="btn btn-lg btn-success btn-block" type="submit" style="width: 150px">@Question.Send</button>
             </form>
         </div>
     </div>

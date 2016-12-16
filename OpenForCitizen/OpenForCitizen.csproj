@@ -194,6 +194,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Menu.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Question.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Question.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Question.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Question.en.resx</DependentUpon>
+    </Compile>
     <Compile Include="Tools\CultureHelper.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +211,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Info.css" />
     <Content Include="Content\MainStylesheet.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -360,6 +371,15 @@
     <EmbeddedResource Include="Resources\Menu.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Menu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Question.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Question.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Question.es.resx" />
+    <EmbeddedResource Include="Resources\Question.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Question.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
