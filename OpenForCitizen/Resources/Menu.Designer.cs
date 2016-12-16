@@ -108,6 +108,42 @@ namespace OpenForCitizen.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Du har väll inte glömt att äta frukost?.
+        /// </summary>
+        public static string ListeItemThree {
+            get {
+                return ResourceManager.GetString("ListeItemThree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nu finns vi också på webben..
+        /// </summary>
+        public static string ListItemFour {
+            get {
+                return ResourceManager.GetString("ListItemFour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gå försiktigt, det är halt ute..
+        /// </summary>
+        public static string ListItemOne {
+            get {
+                return ResourceManager.GetString("ListItemOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kom ihåg att tvätta händerna så inte magsjukan sprider sig..
+        /// </summary>
+        public static string ListItemTwo {
+            get {
+                return ResourceManager.GetString("ListItemTwo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Aktuell information.
         /// </summary>
         public static string Title {

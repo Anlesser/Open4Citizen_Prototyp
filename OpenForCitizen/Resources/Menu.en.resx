@@ -134,6 +134,18 @@
 
 The flu is spreading so wash your hands extra carefull to prevent spread.</value>
   </data>
+  <data name="ListeItemThree" xml:space="preserve">
+    <value>You haven't forgotten to eat breakfast right?</value>
+  </data>
+  <data name="ListItemFour" xml:space="preserve">
+    <value>Now we exist on the web aswell!</value>
+  </data>
+  <data name="ListItemOne" xml:space="preserve">
+    <value>Caution while walking, it's slippery outside</value>
+  </data>
+  <data name="ListItemTwo" xml:space="preserve">
+    <value>Wash your hands carefully, the flu is spreading</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Important Information</value>
   </data>
