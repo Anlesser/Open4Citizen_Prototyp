@@ -9,7 +9,6 @@ namespace OpenForCitizen.Controllers
 {
     public class HomeController : BaseController
     {
-        public string illness_search;
         public ActionResult Index()
         {
             return View();

@@ -12,44 +12,97 @@
         .container-fluid {
         }
 
-        .menulayout {
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            background-color: white;
-            min-width: 300px;
-            position: center;
-            border-radius: 15px;
-            margin-bottom: 15px;
-        }
+    .menulayout {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: white;
+        min-width: 300px;
+        position: center;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        border-style: solid;
+        border-width:3px;
+        border-color:gray;
 
-        div.ex2 {
-            border-radius: 15px;
-            margin: auto;
-            background-color: white;
-            margin-bottom: 15px;
-            margin-top: 5px;
-            text-align: center;
-            max-width: 900px;
-            min-width: 300px;
-        }
-    </style>
+    }
+
+    div.ex2 {
+        border-radius: 15px;
+        margin: auto;
+        background-color: white;
+        margin-bottom: 15px;
+        margin-top: 5px;
+        text-align: center;
+        max-width: 900px;
+        min-width: 300px;
+        background-color:white;
+        border-style: solid;
+        border-width:3px;
+        border-color:gray;
+    }
+
+
+
+    .item {
+        color: black;
+    }
+</style>
 
 </head>
 <body>
-
     <div class="container-fluid text-center">
+
         <div class="ex2">
-            <div style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-                <br />
-                <h1>@Menu.Title</h1>
-                <p>
-                    @Menu.InfoText
-                </p>
-                <br />
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 style="color:black">Aktuell Information</h2>
+                </div>
             </div>
+            <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+                <!-- Indicators -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <ol class="carousel-indicators" style="bottom:-20px;">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <h4>Det är kallt ute. Slå på värmen i hushållen så ni inte fryser!</h4>
+                            </div>
+                            <div class="item">
+                                <h4>Det är magsjuka i trakterna så håll er hemma.</h4>
+                            </div>
+                            <div class="item">
+                                <h4>"Kom ihåg att borsta tänderna på morgonen.</h4>
+                            </div>
+                            <div class="item">
+                                <h4>Sovit dåligt? Ta sovmorgon idag.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            @*<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>*@
         </div>
+
 
         <div class="row">
             <div class="col-md-6 col-sm-6">
