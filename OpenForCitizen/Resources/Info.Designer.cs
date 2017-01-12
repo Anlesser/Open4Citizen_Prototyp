@@ -22,14 +22,14 @@ namespace OpenForCitizen.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Blurgas {
+    public class Info {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Blurgas() {
+        internal Info() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace OpenForCitizen.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OpenForCitizen.Resources.Blurgas", typeof(Blurgas).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OpenForCitizen.Resources.Info", typeof(Info).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,47 @@ namespace OpenForCitizen.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to THIS IS DEFAULT, swedish.
+        ///   Looks up a localized string similar to Tandläkare.
         /// </summary>
-        public static string SomeThing {
+        public static string Dentist {
             get {
-                return ResourceManager.GetString("SomeThing", resourceCulture);
+                return ResourceManager.GetString("Dentist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Läkare.
+        /// </summary>
+        public static string Doctor {
+            get {
+                return ResourceManager.GetString("Doctor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tandhygienist.
+        /// </summary>
+        public static string Hygienist {
+            get {
+                return ResourceManager.GetString("Hygienist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sjuksköterska.
+        /// </summary>
+        public static string Nurse {
+            get {
+                return ResourceManager.GetString("Nurse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Roller inom vården.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
     }

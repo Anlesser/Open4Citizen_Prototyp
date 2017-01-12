@@ -117,36 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BtnHealth" xml:space="preserve">
-    <value>Håll dig frisk</value>
+  <data name="Mail" xml:space="preserve">
+    <value>Correo electrónico</value>
   </data>
-  <data name="BtnInfo" xml:space="preserve">
-    <value>Information</value>
+  <data name="MailUs" xml:space="preserve">
+    <value>O envíenos un correo electrónico</value>
   </data>
-  <data name="BtnQuestions" xml:space="preserve">
-    <value>Frågor</value>
+  <data name="Message" xml:space="preserve">
+    <value>Mensaje</value>
   </data>
-  <data name="BtnSick" xml:space="preserve">
-    <value>Sjuk</value>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
   </data>
-  <data name="InfoText" xml:space="preserve">
-    <value>Just nu är det väldigt halt så var försiktig!
-
-Det är även influensa tider just nu så tvätta händerna noga</value>
+  <data name="OpeningHours" xml:space="preserve">
+    <value>Horario de apertura</value>
   </data>
-  <data name="ListeItemThree" xml:space="preserve">
-    <value>Du har väll inte glömt att äta frukost?</value>
+  <data name="PhoneHours" xml:space="preserve">
+    <value>Horas de teléfono</value>
   </data>
-  <data name="ListItemFour" xml:space="preserve">
-    <value>Nu finns vi också på webben.</value>
+  <data name="PlaceholderMail" xml:space="preserve">
+    <value>Escriba su correo electrónico</value>
   </data>
-  <data name="ListItemOne" xml:space="preserve">
-    <value>Gå försiktigt, det är halt ute.</value>
+  <data name="PlaceholderMessage" xml:space="preserve">
+    <value>Escriba su mensaje</value>
   </data>
-  <data name="ListItemTwo" xml:space="preserve">
-    <value>Kom ihåg att tvätta händerna så inte magsjukan sprider sig.</value>
+  <data name="PlaceholderName" xml:space="preserve">
+    <value>Escribe tu nombre</value>
   </data>
-  <data name="Title" xml:space="preserve">
-    <value>Aktuell information</value>
+  <data name="Send" xml:space="preserve">
+    <value>Enviar</value>
   </data>
 </root>

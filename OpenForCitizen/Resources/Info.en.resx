@@ -117,36 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BtnHealth" xml:space="preserve">
-    <value>Håll dig frisk</value>
+  <data name="Dentist" xml:space="preserve">
+    <value>Dentist</value>
   </data>
-  <data name="BtnInfo" xml:space="preserve">
-    <value>Information</value>
+  <data name="Doctor" xml:space="preserve">
+    <value>Doctor</value>
   </data>
-  <data name="BtnQuestions" xml:space="preserve">
-    <value>Frågor</value>
+  <data name="Hygienist" xml:space="preserve">
+    <value>Hygienist</value>
   </data>
-  <data name="BtnSick" xml:space="preserve">
-    <value>Sjuk</value>
-  </data>
-  <data name="InfoText" xml:space="preserve">
-    <value>Just nu är det väldigt halt så var försiktig!
-
-Det är även influensa tider just nu så tvätta händerna noga</value>
-  </data>
-  <data name="ListeItemThree" xml:space="preserve">
-    <value>Du har väll inte glömt att äta frukost?</value>
-  </data>
-  <data name="ListItemFour" xml:space="preserve">
-    <value>Nu finns vi också på webben.</value>
-  </data>
-  <data name="ListItemOne" xml:space="preserve">
-    <value>Gå försiktigt, det är halt ute.</value>
-  </data>
-  <data name="ListItemTwo" xml:space="preserve">
-    <value>Kom ihåg att tvätta händerna så inte magsjukan sprider sig.</value>
+  <data name="Nurse" xml:space="preserve">
+    <value>Nurse</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Aktuell information</value>
+    <value>Roles within healthcare</value>
   </data>
 </root>

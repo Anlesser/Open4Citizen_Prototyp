@@ -117,7 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SomeThing" xml:space="preserve">
-    <value>THIS IS DEFAULT, swedish</value>
+  <data name="Dentist" xml:space="preserve">
+    <value>Dentista</value>
+  </data>
+  <data name="Doctor" xml:space="preserve">
+    <value>Médico</value>
+  </data>
+  <data name="Hygienist" xml:space="preserve">
+    <value>Higienista dental</value>
+  </data>
+  <data name="Nurse" xml:space="preserve">
+    <value>Enfermera</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Roles en la atención sanitaria</value>
   </data>
 </root>

@@ -1,4 +1,5 @@
-﻿
+﻿@using OpenForCitizen.Resources
+
 @{
     ViewBag.Title = "Questions";
 }
@@ -100,9 +101,6 @@
 
 </script>
 <div class="row" style="margin-top:20px">
-    <div class="col-xs-12 col-md-6">
-        <img class="VC" src="~/Pictures/krpVC.JPG" alt="" />
-    </div>
     <div class="col-xs-12 col-md-6 ">
         <div class="textbox">
             <h2> Vårdcentralen Kronoparken</h2>
@@ -110,42 +108,85 @@
             <script>getPhonehours("vardcentralen");</script>
 
             <p style="font-size: 18px">
-                <b>Öppettider idag:</b>
+                <b>@Question.OpeningHours</b>
                 <text id="VCopen"></text>
             </p>
             <p style="font-size: 18px">
-                <b>Telefontider idag:</b>
+                <b>@Question.PhoneHours</b>
                 <text id="VCtele"></text>
             </p>
             <p style="font-size: 18px">
                 <span class="glyphicon glyphicon-earphone"></span>
                 <text>054-61 69 65 </text>
             </p>
-            <p style="font-size: 18px">Eller maila oss:</p>
+            <p style="font-size: 18px">@Question.MailUs</p>
 
             <form class="form-register" id="registerForm" action="@Url.Action("sendMail","Home", new {emailTo="VCkronoparken@gmail.com"})" method="post">
-                <label for="form_mail">Namn *</label>
-                <input id="form_name" style="border-radius: 15px" type="text" name="name" class="form-control" placeholder="Skriv in ditt namn *" required="required" data-error="Name is required.">
+                <label for="form_mail">@Question.Name</label>
+                <input id="form_name" style="border-radius: 15px" type="text" name="name" class="form-control" placeholder="@Question.PlaceholderName" required="required" data-error="Name is required.">
                 <div class="help-block with-errors"></div>
 
-                <label for="form_mail">Mail *</label>
-                <input id="form_mail" style="border-radius: 15px" type="email" name="emailFrom" class="form-control" placeholder="Skriv in din mail *" required="required" data-error="Email is required.">
+                <label for="form_mail">@Question.Mail</label>
+                <input id="form_mail" style="border-radius: 15px" type="email" name="emailFrom" class="form-control" placeholder="@Question.PlaceholderMail" required="required" data-error="Email is required.">
                 <div class="help-block with-errors"></div>
 
-                <label for="form_message">Meddelande *</label>
-                <textarea id="form_message"style="border-radius: 15px"  name="messageFromUser" class="form-control" placeholder="Skriv ditt meddelande*" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                <label for="form_message">@Question.Message</label>
+                <textarea id="form_message" style="border-radius: 15px" name="messageFromUser" class="form-control" placeholder="@Question.PlaceholderMail" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                 <div class="help-block with-errors"></div>
-                <button id="send" class="btn btn-lg btn-success btn-block" type="submit" style="width: 150px">Skicka</button>
+                <button id="send" class="btn btn-lg btn-success btn-block" type="submit" style="width: 150px">@Question.Send</button>
             </form>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1015.2822837938216!2d13.57905387188309!3d59.406976918271376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf02b271728a2997!2sKronoparken+V%C3%A5rdcentral!5e0!3m2!1ssv!2sse!4v1481724459294"
-                    style="border-radius:15px; height:auto; width:100%; margin-top:10px;" frameborder="0" allowfullscreen></iframe>
-        </div>
+    <div class="col-xs-12 col-md-6">
+        <img class="VC" src="~/Pictures/krpVC.JPG" style="max-height:370px;" />
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1015.2822837938216!2d13.57905387188309!3d59.406976918271376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf02b271728a2997!2sKronoparken+V%C3%A5rdcentral!5e0!3m2!1ssv!2sse!4v1481724459294"
+                style="border-radius:15px; height:auto; width:100%; max-width:490px; margin-top:10px;" frameborder="0" allowfullscreen></iframe>
     </div>
-
 </div>
 
+<div class="row" style="margin-top:20px">
+    @*foltandvården*@
+    <div class="col-xs-12 col-md-6 ">
+        <div class="textbox">
+            <h2> Folktandvården Kronoparken</h2>
+            <script>getOpeninghours("folktandvården");</script>
+            <script>getPhonehours("folktandvården");</script>
 
+            <p style="font-size: 18px">
+                <b>@Question.OpeningHours</b>
+                <text id="FTVopen"></text>
+            </p>
+            <p style="font-size: 18px">
+                <b>@Question.PhoneHours</b>
+                <text id="FTVtele"></text>
+            </p>
+            <p style="font-size: 18px">
+                <span class="glyphicon glyphicon-earphone"></span>
+                <text>054-61 69 50 </text>
+            </p>
+            <p style="font-size: 18px">@Question.MailUs</p>
+
+            <form class="form-register" id="registerForm" action="@Url.Action("sendMail","Home", new {emailTo="VCkronoparken@gmail.com"})" method="post">
+                <label for="form_mail">@Question.Name</label>
+                <input id="form_name" style="border-radius: 15px" type="text" name="name" class="form-control" placeholder="@Question.PlaceholderName" required="required" data-error="Name is required.">
+                <div class="help-block with-errors"></div>
+
+                <label for="form_mail">@Question.Mail</label>
+                <input id="form_mail" style="border-radius: 15px" type="email" name="emailFrom" class="form-control" placeholder="@Question.PlaceholderMail" required="required" data-error="Email is required.">
+                <div class="help-block with-errors"></div>
+
+                <label for="form_message">@Question.Message</label>
+                <textarea id="form_message" style="border-radius: 15px" name="messageFromUser" class="form-control" placeholder="@Question.PlaceholderMessage" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                <div class="help-block with-errors"></div>
+                <button id="send" class="btn btn-lg btn-success btn-block" type="submit" style="width: 150px">@Question.Send</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+        <img class="VC" src="~/Pictures/folktandvården-vi-jobbar.JPG" style="width:100%; max-width:490px;" />
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2030.5488150726903!2d13.575946751195538!3d59.40723971172602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465cb13219297cd1%3A0xef6bc6bb782134f9!2sFolktandv%C3%A5rden+Kronoparken!5e0!3m2!1ssv!2sse!4v1481881675495"
+                style="border-radius:15px; height:auto; width:100%; max-width:490px; margin-top:10px;" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+width

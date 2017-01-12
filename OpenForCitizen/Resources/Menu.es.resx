@@ -134,6 +134,18 @@
 
 Laba tus manos bien porque la gripe  esta creciendo</value>
   </data>
+  <data name="ListeItemThree" xml:space="preserve">
+    <value>No te olvides de el desayuno!</value>
+  </data>
+  <data name="ListItemFour" xml:space="preserve">
+    <value>Ahora existimos en el web!</value>
+  </data>
+  <data name="ListItemOne" xml:space="preserve">
+    <value>Ten cuidado porque esta muy resbaloso afuera</value>
+  </data>
+  <data name="ListItemTwo" xml:space="preserve">
+    <value>Lava tus manos bien para que  la gripe no se propaga</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Information actual</value>
   </data>

@@ -22,14 +22,14 @@ namespace OpenForCitizen.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Menu {
+    public class Question {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Menu() {
+        internal Question() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace OpenForCitizen.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OpenForCitizen.Resources.Menu", typeof(Menu).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OpenForCitizen.Resources.Question", typeof(Question).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,94 +61,92 @@ namespace OpenForCitizen.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Håll dig frisk.
+        ///   Looks up a localized string similar to Mail *.
         /// </summary>
-        public static string BtnHealth {
+        public static string Mail {
             get {
-                return ResourceManager.GetString("BtnHealth", resourceCulture);
+                return ResourceManager.GetString("Mail", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Information.
+        ///   Looks up a localized string similar to Eller maila oss:.
         /// </summary>
-        public static string BtnInfo {
+        public static string MailUs {
             get {
-                return ResourceManager.GetString("BtnInfo", resourceCulture);
+                return ResourceManager.GetString("MailUs", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Frågor.
+        ///   Looks up a localized string similar to Meddelande *.
         /// </summary>
-        public static string BtnQuestions {
+        public static string Message {
             get {
-                return ResourceManager.GetString("BtnQuestions", resourceCulture);
+                return ResourceManager.GetString("Message", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sjuk.
+        ///   Looks up a localized string similar to Namn *.
         /// </summary>
-        public static string BtnSick {
+        public static string Name {
             get {
-                return ResourceManager.GetString("BtnSick", resourceCulture);
+                return ResourceManager.GetString("Name", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Just nu är det väldigt halt så var försiktig!
-        ///
-        ///Det är även influensa tider just nu så tvätta händerna noga.
+        ///   Looks up a localized string similar to Öppettider idag:.
         /// </summary>
-        public static string InfoText {
+        public static string OpeningHours {
             get {
-                return ResourceManager.GetString("InfoText", resourceCulture);
+                return ResourceManager.GetString("OpeningHours", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Du har väll inte glömt att äta frukost?.
+        ///   Looks up a localized string similar to Telefontider idag:.
         /// </summary>
-        public static string ListeItemThree {
+        public static string PhoneHours {
             get {
-                return ResourceManager.GetString("ListeItemThree", resourceCulture);
+                return ResourceManager.GetString("PhoneHours", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nu finns vi också på webben..
+        ///   Looks up a localized string similar to Skriv in din mail *.
         /// </summary>
-        public static string ListItemFour {
+        public static string PlaceholderMail {
             get {
-                return ResourceManager.GetString("ListItemFour", resourceCulture);
+                return ResourceManager.GetString("PlaceholderMail", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gå försiktigt, det är halt ute..
+        ///   Looks up a localized string similar to Skriv in ditt meddelande *.
         /// </summary>
-        public static string ListItemOne {
+        public static string PlaceholderMessage {
             get {
-                return ResourceManager.GetString("ListItemOne", resourceCulture);
+                return ResourceManager.GetString("PlaceholderMessage", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kom ihåg att tvätta händerna så inte magsjukan sprider sig..
+        ///   Looks up a localized string similar to Skriv in ditt namn *.
         /// </summary>
-        public static string ListItemTwo {
+        public static string PlaceholderName {
             get {
-                return ResourceManager.GetString("ListItemTwo", resourceCulture);
+                return ResourceManager.GetString("PlaceholderName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Aktuell information.
+        ///   Looks up a localized string similar to Skicka.
         /// </summary>
-        public static string Title {
+        public static string Send {
             get {
-                return ResourceManager.GetString("Title", resourceCulture);
+                return ResourceManager.GetString("Send", resourceCulture);
             }
         }
     }

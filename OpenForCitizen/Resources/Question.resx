@@ -117,7 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SomeThing" xml:space="preserve">
-    <value>Espain</value>
+  <data name="Mail" xml:space="preserve">
+    <value>Mail *</value>
+  </data>
+  <data name="MailUs" xml:space="preserve">
+    <value>Eller maila oss:</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Meddelande *</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Namn *</value>
+  </data>
+  <data name="OpeningHours" xml:space="preserve">
+    <value>Öppettider idag:</value>
+  </data>
+  <data name="PhoneHours" xml:space="preserve">
+    <value>Telefontider idag:</value>
+  </data>
+  <data name="PlaceholderMail" xml:space="preserve">
+    <value>Skriv in din mail *</value>
+  </data>
+  <data name="PlaceholderMessage" xml:space="preserve">
+    <value>Skriv in ditt meddelande *</value>
+  </data>
+  <data name="PlaceholderName" xml:space="preserve">
+    <value>Skriv in ditt namn *</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Skicka</value>
   </data>
 </root>
