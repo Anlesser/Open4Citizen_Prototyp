@@ -8,47 +8,47 @@
 <script src="~/scripts/information.js"></script>
 <head>
     <link rel="stylesheet" type="text/css" href="~/Content/MainStylesheet.css">
-    <link rel="stylesheet" type="text/css" href="~/Content/Info.css"/>
+    <link rel="stylesheet" type="text/css" href="~/Content/Info.css" />
 </head>
 
 
 <h1 class="text-center" style="color:black">@Info.Title</h1>
 
 <body>
-  <div style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <div style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
         <div class="container-fluid text-center">
-        <div class="row">
-            <div class="col-md-6 col-sm-6 text-center">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 text-center">
                     <button class="videopic btn btn-default btn-group-lg" onclick="openNav(1)">
-                <h2 class="">@Info.Doctor</h2>
-                        <img src="~/Pictures/Läkare.jpg"  height="180" align="middle" style="border-radius:15px; margin-bottom:5px; padding-left:10px; padding-right:10px;" />
+                        <h2 class="">@Info.Doctor</h2>
+                        <img src="~/Pictures/Läkare.jpg" height="180" align="middle" style="border-radius:15px; margin-bottom:5px; padding-left:10px; padding-right:10px;" />
                     </button>
-            </div>
+                </div>
                 <div class="col-md-6 col-sm-6">
-                    <button class="videopic btn btn-default btn-group-lg"onclick="openNav(2)">
-                <h2 class="text-center">@Info.Dentist</h2>
+                    <button class="videopic btn btn-default btn-group-lg" onclick="openNav(2)">
+                        <h2 class="text-center">@Info.Dentist</h2>
                         <img src="~/Pictures/Tandläkare.jpg" height="180" style="border-radius:15px; margin-bottom:5px;" align="middle" />
                     </button>
+                </div>
             </div>
-        </div>
-        <div class="row">
-           
+            <div class="row">
+
                 <div class="col-md-6 col-sm-6">
                     <button class="videopic btn btn-default btn-group-lg" onclick="openNav(3)">
-                <h2 class="text-center">@Info.Nurse</h2>
-                        <img src="~/Pictures/nurse.jpg"  height="180" align="middle" style="border-radius:15px; margin-bottom:5px;" />
+                        <h2 class="text-center">@Info.Nurse</h2>
+                        <img src="~/Pictures/nurse.jpg" height="180" align="middle" style="border-radius:15px; margin-bottom:5px;" />
                     </button>
-            </div>
+                </div>
                 <div class="col-md-6 col-sm-6">
                     <button class="videopic btn btn-default btn-group-lg" onclick="openNav(4)">
-                <h2 class="text-center">@Info.Hygienist</h2>
-                        <img src="~/Pictures/Tandhygienist.jpg" height="180"  align="middle" style="border-radius:15px; margin-bottom:5px;" />
+                        <h2 class="text-center">@Info.Hygienist</h2>
+                        <img src="~/Pictures/Tandhygienist.jpg" height="180" align="middle" style="border-radius:15px; margin-bottom:5px;" />
                     </button>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-   
+
 
     <div id="myNav" class="overlay">
         <div class="row">
@@ -56,21 +56,13 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             </div>
         </div>
-        
-           <div class="col-lg-12"></div>
-            <div class="overlay-content">
-            
-                <div class="videoWrapper" id="video-objekt">
+
+        <div class="col-lg-12"></div>
+        <div class="overlay-content">
+
+            <div class="videoWrapper" id="video-objekt">
                 <iframe id="film" class="videoWrapper-iframe" src="https://www.youtube.com/embed/Mprwljl7vh0" frameborder="0" allowfullscreen></iframe>
-                </div>
-            
             </div>
-       
+        </div>
     </div>
-
-
-  
-
-
-
 </body>
