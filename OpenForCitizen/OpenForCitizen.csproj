@@ -189,6 +189,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Question.en.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Sick.es.Designer.cs">
+      <DependentUpon>Sick.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Sick.en.Designer.cs">
+      <DependentUpon>Sick.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Sick.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sick.resx</DependentUpon>
+    </Compile>
     <Compile Include="Tools\CultureHelper.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -353,6 +368,18 @@
     <EmbeddedResource Include="Resources\Question.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Question.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Sick.es.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Sick.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Sick.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Sick.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Sick.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Sick.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
