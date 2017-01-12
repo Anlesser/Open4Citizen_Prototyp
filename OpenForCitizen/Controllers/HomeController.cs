@@ -51,24 +51,33 @@ namespace OpenForCitizen.Controllers
         [HttpPost]
         public string searchIllness(string illness)
         {
+            try
+            {
+                // Create a request for the URL. 
+                WebRequest request =
+                    WebRequest.Create(
+                        "http://www.1177.se/api/v2/artiklar/?antal=10&key=cc7f8361f7eb4e51b46c95d376c7010a");
+                // If required by the server, set the credentials.
+                request.Credentials = CredentialCache.DefaultCredentials;
+                // Get the response.
+                WebResponse response = request.GetResponse();
+                // Get the stream containing content returned by the server.
+                Stream dataStream = response.GetResponseStream();
+                // Open the stream using a StreamReader for easy access.
 
-            // Create a request for the URL. 
-            WebRequest request = WebRequest.Create("http://www.1177.se/api/v2/artiklar/?antal=4&key=cc7f8361f7eb4e51b46c95d376c7010a");
-            // If required by the server, set the credentials.
-            request.Credentials = CredentialCache.DefaultCredentials;
-            // Get the response.
-            WebResponse response = request.GetResponse();
-            // Get the stream containing content returned by the server.
-            Stream dataStream = response.GetResponseStream();
-            // Open the stream using a StreamReader for easy access.
-
-            StreamReader reader = new StreamReader(dataStream);
-            // Read the content.
-            string responseFromServer = reader.ReadToEnd();
-            // Clean up the streams and the response.
-            reader.Close();
-            response.Close();
-            return responseFromServer;
+                StreamReader reader = new StreamReader(dataStream);
+                // Read the content.
+                string responseFromServer = reader.ReadToEnd();
+                // Clean up the streams and the response.
+                reader.Close();
+                response.Close();
+                return responseFromServer;
+            }
+            catch (Exception e)
+            {
+                Debug.Write("\nSearchIllness exception:" + e);
+                return null;
+            }
         }
 
         private string mouthCareOpeningHours(string dayOfWeek)
@@ -107,7 +116,7 @@ namespace OpenForCitizen.Controllers
 
 
      
-        // user:         VCkronoparken@gmail.com
+        // user:         VCkronoparken@gmail.com (not using this now )
         // password: krpkrpkrp
         public ActionResult sendMail(string name, string emailFrom, string messageFromUser, string emailTo )
         {

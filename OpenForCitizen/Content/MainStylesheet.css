@@ -4,14 +4,14 @@
             background-position:center center;
             background-attachment:fixed;
         }
-
+/*Loading icon for illnessInfo*/
 .loader {
             position: absolute;
             left: 50%;
             top: 50%;
             z-index: 1;
             margin: -75px 0 0 -75px;
-            border:16px solid #f3f3f3;
+            border:16px solid #cbcbcb;
             border-radius:50%;
             border-top:16px solid #ff6a00;
             width:120px;

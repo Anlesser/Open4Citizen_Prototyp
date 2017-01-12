@@ -31,55 +31,59 @@
                     illness: "ögon"
                 },
                 success: queryData,
-                error: function (data) {
-                    $("#loadingIcon").hide();
-                },
                 type: "POST"
             });
         })
     </script>
 
-
-
     <script type="text/javascript">
         function queryData(xmldata) {
-            var idCount = 1;
-            $(xmldata).find("entry").each(function () {
-
-                $("#containerDiv").append('<div class="col-md-12" id="artikelDiv' + idCount + '" style="background-color:white; border-radius: 15px; margin:15px; padding-top:5px; padding-bottom:10px; border-width:3px; border-color:gray; border-style:solid;">')
-                $('#artikelDiv' + idCount).append('<h2>' + $(this).find("title").text() + '</h2>')
-                var summary = $(this).find("summary").text();
-                var link = $(this).find('link').attr('href');
-
-                if (summary.length > 600) {
-                    $('#artikelDiv' + idCount).append('<div id="contentDiv' + idCount + '"class="panel-collapse collapse out"></div>')
-                    $('#artikelDiv' + idCount).append('<a data-toggle="collapse" href="#contentDiv' + idCount + '"> Läs mer </a>')
-                    $('#contentDiv' + idCount).append('<p>' + summary + '</p>')
-                    $('#contentDiv' + idCount).append('<a target="_blank" href="' + link + '">' + 'Läs hela artikeln' + '</a>');
-                }
-                else if (summary.length === 0) {
-                    $('#artikelDiv' + idCount).append('<p> Finns ingen summering</p>')
-                    $('#artikelDiv' + idCount).append('<a href=" ' + link + ' " target="_blank" >' + 'Läs hela artikeln' + '</a>')
-                }
-                else {
-                    $('#artikelDiv' + (idCount)).append('<p>' + summary + '</p>')
-                    $('#artikelDiv' + idCount).append('<a href="' + link + '">' + 'Läs hela artikeln' + '</a>')
-                }
-                idCount++;
-                $('#artikelDiv' + (idCount++)).append('</div>')
-            });
             $("#loadingIcon").hide();
+            $("#loadingInfo").hide();
             document.getElementById("containerDiv").style.display = "block"; // döljer loader och visar texten
+            if (!xmldata) {
+                $("#problemInfo").hide();
+                $("#loadingError").show();
+            }
+            else {
+                var idCount = 1;
+                $(xmldata).find("entry").each(function () {
+                    $("#containerDiv").append('<div class="col-md-12" id="artikelDiv' + idCount + '" style="background-color:white; border-radius: 15px; margin:15px; padding-top:5px; padding-bottom:10px; border-width:3px; border-color:gray; border-style:solid;">')
+                    $('#artikelDiv' + idCount).append('<h2>' + $(this).find("title").text() + '</h2>');
+                    var summary = $(this).find("summary").text();
+                    var link = $(this).find('link').attr('href');
+
+                    if (summary.length > 600) {
+                        $('#artikelDiv' + idCount).append('<div id="contentDiv' + idCount + '"class="panel-collapse collapse out"></div>');
+                        $('#artikelDiv' + idCount).append('<a data-toggle="collapse" href="#contentDiv' + idCount + '"> Läs mer </a>');
+                        $('#contentDiv' + idCount).append('<p>' + summary + '</p>');
+                        $('#contentDiv' + idCount).append('<a target="_blank" href="' + link + '">' + 'Läs hela artikeln' + '</a>');
+                    }
+                    else if (summary.length === 0) {
+                        $('#artikelDiv' + idCount).append('<p> Finns ingen summering</p>');
+                        $('#artikelDiv' + idCount).append('<a href=" ' + link + ' " target="_blank" >' + 'Läs hela artikeln' + '</a>');
+                    }
+                    else {
+                        $('#artikelDiv' + (idCount)).append('<p>' + summary + '</p>');
+                        $('#artikelDiv' + idCount).append('<a href="' + link + '">' + 'Läs hela artikeln' + '</a>');
+                    }
+                    idCount++;
+                    $('#artikelDiv' + (idCount++)).append('</div>');
+                });
+            }
         }
     </script>
 </head>
 
 <body>
 
+    <h3 id="loadingInfo" class="text-center">Hämtar data från 1177</h3>
+    <h3 id="loadingError" class="text-center" hidden="hidden">Kunde inte hämta data</h3>
     <div id="loadingIcon" class="loader"></div>
 
+
     <div class="container text-center animate-bottom" id="containerDiv">
-        <h1 align="center" style="color:black">
+        <h1 id="problemInfo" align="center" style="color:black">
             @{if (Session["illness"] != null)
                 {
                     string illness = Session["illness"].ToString();
@@ -88,7 +92,7 @@
                     //    illness += "s"; // lägger till s på slutet av problemområdet.
                     //}
                     @Html.Raw(illness);
-                } }problem kan bero på följande
+                } }problem kan bero på följande:
         </h1>
     </div>
     <script>$("#containerDiv").hide();</script>
