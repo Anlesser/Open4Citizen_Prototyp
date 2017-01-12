@@ -3,8 +3,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Mail;
+using System.Web.Mail;
 using System.Web.Mvc;
-
 namespace OpenForCitizen.Controllers
 {
     public class HomeController : BaseController
@@ -105,29 +105,13 @@ namespace OpenForCitizen.Controllers
             return healthplace == "vardcentralen" ? vcPhonehours(dayOfWeek.ToString()) : mouthCareOpeningHours(dayOfWeek.ToString());
         }
 
+
+     
+        // user:         VCkronoparken@gmail.com
+        // password: krpkrpkrp
         public ActionResult sendMail(string name, string emailFrom, string messageFromUser, string emailTo )
         {
             Debug.Write("\nName:"+ name + "\nemail:" + emailFrom + "\nMessage:"+ messageFromUser + "\nTo:" + emailTo);
-  
-            MailMessage message = new MailMessage(emailFrom, emailTo);
-            message.Subject = "Using the new SMTP client.";
-            message.Body = @"Using this new feature, you can send an e-mail message from an application very easily.";
-            SmtpClient client = new SmtpClient();
-            client.Port = 587;
-            client.Host = "smtp.gmail.com";
-            // Credentials are necessary if the server requires the client 
-            // to authenticate before it will send e-mail on the client's behalf.
-            client.UseDefaultCredentials = true;
-
-            try
-            {
-                client.Send(message);
-            }
-            catch (Exception ex)
-            {
-                Debug.Write("Exception caught in sendMail",
-                            ex.ToString());
-            }
 
             return RedirectToAction("Questions", "Home");
         }
